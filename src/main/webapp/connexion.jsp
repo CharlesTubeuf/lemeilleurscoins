@@ -16,21 +16,60 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
 
 <body>
 
-<h2>Connectez vous</h2>
+<!--debut navbar  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="./index.jsp">LeMeilleurCoin</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="./connexion.jsp">Se connecter<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Mes recherches</a>
+      </li>
+      
+     <li class="nav-item">
+        <a class="nav-link" href="#">Favoris</a>
+      </li>
+      
+   <li class="nav-item">
+        <a class="nav-link" href="#">Messages</a>
+      </li>
+    </ul>
+  <a class="navbar-brand" href="#"> <img src="img/payment.png"  alt="..." style="width: 5rem;" > </a>
+   
+  </div>
+</nav>
+<!--fin navbar  -->
+
+<h2 class="text-center">Connectez vous</h2>
 <br/>
+<!-- debut connexion -->
 <c:if test="${creer==true}"> Le compte à bien été creer, veuillez vous connecter... </c:if>
 <br/>
 <c:if test="${connect==false}"> OUPS... le MDP ou le pseudo est incorrect, veuillez vous connecter... </c:if>
 <form action="Connexion" method="post">
-	<label for="pseudo">Pseudo</label>
-	<input type="text" name="pseudo" required >
-<br />
-	<label for="mdp">Mot de passe</label>
-	<input type="password" name="mdp" required>
-<br />
-	<input type="submit" value="Connexion"/>
-
+  <div class="form-group">
+    <label for="pseudo" >Pseudo</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="pseudo" required>
+   
+  </div>
+  <div class="form-group">
+    <label for="mdp">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="mdp" required>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Connexion</button>
 </form>
+<!-- fin connexion -->
+
+
+ <a  href="./inscription.jsp" >S'inscrire!</a>
+
 
 
 
