@@ -16,7 +16,7 @@ public class Connexion extends HttpServlet {
 		String pseudo = request.getParameter("pseudo");
 		String mdp = request.getParameter("mdp");
 		
-		boolean connect = beans.Methodes.connexionCompte(pseudo,mdp);
+		boolean connect = beans.Compte.connexionCompte(pseudo,mdp);
 		
 		if ( connect == true)
 		{

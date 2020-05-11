@@ -1,17 +1,14 @@
 package servlets;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.Driver;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@WebServlet(urlPatterns="/Inscription")
 public class Inscription extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -30,12 +27,12 @@ public class Inscription extends HttpServlet {
 		/////////////////////////// INSTANCIE UN COMPTE AVEC LE FORMULAIRE
 		/////////////////////////// //////////////////////////////////
 		beans.Compte leCompte = new beans.Compte(pseudo, mail, mdp);
-
+		System.out.println(leCompte);
 		/////////////////////////// AJOUT DU COMPTE A LA BASE SQL SI PAS EXISTANT
 		/////////////////////////// /////////////////////////
 		// la méthode vérifie que le pseudo n'existe pas déjà, s'il existe msg dans la
 		// console et renvoi au formulaire grace au if , sinon il renvoie à la page connexion.
-		boolean creer = beans.Methodes.nouveauCompte(leCompte);
+		boolean creer = beans.Compte.nouveauCompte(leCompte);
 		
 		request.setAttribute("creer", creer);
 		if (creer == false) {

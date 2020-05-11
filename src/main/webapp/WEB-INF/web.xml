@@ -17,12 +17,6 @@
   	<servlet-class>servlets.Compte</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>Inscription</servlet-name>
-  	<display-name>Inscription</display-name>
-  	<description></description>
-  	<servlet-class>servlets.Inscription</servlet-class>
-  </servlet>
-  <servlet>
   	<servlet-name>Connexion</servlet-name>
   	<display-name>Connexion</display-name>
   	<description></description>
@@ -35,10 +29,6 @@
   <servlet-mapping>
   	<servlet-name>Compte</servlet-name>
   	<url-pattern>/Compte</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>Inscription</servlet-name>
-  	<url-pattern>/Inscription</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>Connexion</servlet-name>
