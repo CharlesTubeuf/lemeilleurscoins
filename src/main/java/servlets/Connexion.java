@@ -20,7 +20,6 @@ public class Connexion extends HttpServlet {
 		
 		if(pseudo == null)
 		{
-			System.out.println("boursouflure dégueux que je vais supprimer pour ne pas assumer");
 			pseudo = "";
 			mdp = "";
 		}

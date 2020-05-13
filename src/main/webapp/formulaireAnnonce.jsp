@@ -8,48 +8,76 @@
 <title>déposer une annonce</title>
 </head>
 <body>
+<!--debut navbar  -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="./index.jsp">LeMeilleurCoin</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link"
+					href="./connexion.jsp">Se connecter<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#">Mes
+						recherches</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="#">Favoris</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="#">Messages</a>
+				</li>
+			</ul>
+			<a class="navbar-brand" href="#"> <img src="img/payment.png"
+				alt="..." style="width: 5rem;">
+			</a>
+
+		</div>
+	</nav>
+	<!--fin navbar  -->
+	
 <h3>Veuillez remplir les informations concernants votre annonce</h3>
 
-<form>
+<form action="ConstructeurAnnonce" method="get">     <!-- formulaire de dépot d'annonce -->
 
 <!-- menu déroulant permettant de choisir la catégorie -->
 
 <div class="form-group">
-    <label for="exampleFormControlSelect1">Catégorie</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>jeux</option>
-      <option>trucs bizarres</option>
-      <option>musique</option>
-      <option>voitures</option>
-      <option>cartes pokémon</option>
+    <label for="categorie">Catégorie</label>
+    <select class="form-control" id="categorie" name="categorie" required>
+      <option>Instrument de musique</option>
+      <option>Multimédia</option>
     </select>
   </div>
   
 <!-- titre de l'annonce; -->
 
 <div class="form-group">
-    <label for="exampleFormControlTextarea1">Titre de l'annonce</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+    <label for="titre">Titre de l'annonce</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" name="titre" rows="1"></textarea>
 </div>
 
 	 <!-- prix de l'objet ; -->
 <div class="form-group">
-    <label for="exampleInputEmail1">Prix</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">	
+    <label for="prix">Prix</label>
+    <input type="number" placeholder="€" class="form-control" id="prix" name="prix" aria-describedby="Choisissez le prix qui vous parait le plus juste">	
 </div>
 	
 	 <!-- description de l'objet ; -->
 	 
 <div class="form-group">
-    <label for="exampleFormControlTextarea1">Description</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="description">Description</label>
+    <textarea class="form-control" placeholder="Veuillez décrire brièvement votre produit..." id="description" name="description" rows="3"></textarea>
 </div>
 	 
 	<!-- ajouter une ou plusieurs photos de l'objet; -->
 
   <div class="form-group">
-    <label for="exampleFormControlFile1">Mettre une photo</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <label for="photos">Mettre une photo</label>
+    <input type="file" class="form-control-file" id="photos" name="photos">
   </div>
 </form>
 
