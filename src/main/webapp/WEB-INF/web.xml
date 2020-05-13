@@ -22,6 +22,12 @@
   	<description></description>
   	<servlet-class>servlets.Connexion</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ConstructeurAnnonce</servlet-name>
+  	<display-name>ConstructeurAnnonce</display-name>
+  	<description></description>
+  	<servlet-class>servlets.ConstructeurAnnonce</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Index</servlet-name>
   	<url-pattern>/Index</url-pattern>
@@ -33,5 +39,9 @@
   <servlet-mapping>
   	<servlet-name>Connexion</servlet-name>
   	<url-pattern>/Connexion</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ConstructeurAnnonce</servlet-name>
+  	<url-pattern>/ConstructeurAnnonce</url-pattern>
   </servlet-mapping>
 </web-app>
