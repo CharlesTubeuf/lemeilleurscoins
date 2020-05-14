@@ -8,7 +8,7 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Connexion</title>
+<title>Inscription</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -52,43 +52,36 @@
 
 
 	<br />
-
-	
-
-
-
-
+	<!-- debut connexion -->
 
 	<div>
 		
-				<!--  debut connexion -->
-				<h2 class="text-center">Connectez vous</h2>
-<i> <c:if test="${creer==true}"> Le compte à bien été creer, veuillez vous connecter... </c:if>
-	<c:if test="${connect==false}"> OUPS... le MDP ou le pseudo est incorrect, veuillez vous inscrire... </c:if>
-</i>
+				<h2 class="text-center">Inscrivez vous</h2>
+				<form action="Inscription" method="get">
 
-				<form action="Connexion" method="post">
 					<div class="form-group">
-						<label for="pseudo">Pseudo</label> <input type="text"
+						<label for="mail">Email</label> <input type="email"
 							class="form-control" id="exampleInputEmail1"
-							aria-describedby="emailHelp" name="pseudo" required>
+							aria-describedby="emailHelp" name="mail" required>
 
 					</div>
+
+
 					<div class="form-group">
-						<label for="mdp">Password</label> <input type="password"
+						<label for="pseudo">Pseudo</label> <input type="text"
+							class="form-control" id="exampleInputPseudo1"
+							aria-describedby="emailHelp" name="pseudo" required>
+						<i> <c:if test="${creer==false}"> Le pseudo est déjà utilisé... </c:if> </i>
+					</div>
+					<div class="form-group">
+						<label for="mdp">Mot de passe</label> <input type="password"
 							class="form-control" id="exampleInputPassword1" name="mdp"
 							required>
 					</div>
 
-					<button type="submit" class="btn btn-primary">Connexion</button>
-					
-					 <a class="navbar-brand" href="./inscription.jsp">Inscrivez vous!</a>
+					<button type="submit" value="Inscription" class="btn btn-primary">Inscription</button>
 				</form>
-
-				<!-- fin connexion -->
-
-
-		
+				<!--  fin inscription -->			
 	</div>
 
 
