@@ -35,8 +35,8 @@ public class Connexion extends HttpServlet {
 
 			// ON ENVOYE TOUTES LES DONNEES DU COMPTE
 			Compte compte = Compte.getCompte(pseudo);
-			HttpSession session = request.getSession();
-			session.setAttribute("compte", compte);
+			HttpSession sessionUtilisateur = request.getSession();
+			sessionUtilisateur.setAttribute("compte", compte);
 			
 			
 			// AVANT ON ENVOYAIS JUSTE LE PSEUDO

@@ -1,13 +1,7 @@
-
-
-<!-- <body>
-<h1> Bienvenue sur notre site !</h1>
-
-<a  href="./connexion.jsp">Connexion</a>
-<br>
-<a href="./inscription.jsp">Inscription</a> -->
-
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,8 +14,8 @@
 </head>
 <body>
 
-
 	<!--debut navbar  -->
+
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="./index.jsp">LeMeilleurCoin</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -32,10 +26,14 @@
 		</button>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav mr-auto"> 
+			<!-- ////////////////////// afficher que personne n'est connectÃ© -->
+			<c:if test="${!empty sessionScope.sessionUtilisateur.pseudo}"> 
 				<li class="nav-item active"><a class="nav-link  "
 					href="./connexion.jsp">Se connecter<span class="sr-only">(current)</span></a>
 				</li>
+			</c:if>
+				
 				<li class="nav-item"><a class="nav-link" href="#">Mes
 						recherches</a></li>
 
@@ -43,6 +41,7 @@
 
 				<li class="nav-item"><a class="nav-link" href="#">Messages</a>
 				</li>
+				
 			</ul>
 			<a class="navbar-brand" href="#"> <img src="img/payment.png"
 				alt="..." style="width: 5rem;">
@@ -50,6 +49,7 @@
 
 		</div>
 	</nav>
+	
 	<!--fin navbar  -->
 
 	<h5 class="text-center p-3 mb-2 bg-primary text-white">Trouvez la
@@ -66,9 +66,9 @@
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> Catégories </a>
+					aria-expanded="false"> CatÃ©gories </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Multimédias</a> <a
+						<a class="dropdown-item" href="#">MultimÃ©dias</a> <a
 							class="dropdown-item" href="#">Instruments de musique</a>
 
 					</div>
@@ -143,7 +143,7 @@
 	<h5 class="text-center p-3 mb-2 bg-primary text-white">Top des
 		ventes</h5>
 
-	<!-- debut top catégories -->
+	<!-- debut top catÃ©gories -->
 
 
 	<div class="row row-cols-1 row-cols-md-3">
@@ -176,7 +176,7 @@
 		</div>
 
 	</div>
-	<!-- fin top catégories -->
+	<!-- fin top catÃ©gories -->
 
 
 
@@ -204,8 +204,8 @@
               </a>
             </div>
             <div class="col-sm-11 text-white">
-                <div><h4>  Contact</h4>
-                    <p>   <span class="header-font">M</span>y<span class="header-font"></span>LeMeilleurCoin.com</p>
+                <div><h4>Â Â Contact</h4>
+                    <p>Â Â Â <span class="header-font">M</span>y<span class="header-font"></span>LeMeilleurCoin.com</p>
                 </div>
             </div>
             </div>
@@ -233,7 +233,7 @@
         </div>
       </div>
     </div>
-    <p class="text-center"> Copyright © LeMeilleurCoin.com </p>
+    <p class="text-center"> Copyright Â© LeMeilleurCoin.com </p>
     </div>
 </footer>
     <!--/.footer-->
