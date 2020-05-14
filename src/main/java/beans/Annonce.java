@@ -25,13 +25,13 @@ public class Annonce {
 	private int prix;
 	private String categorie;
 	private String description;
-	private List<String> nomImage; //généré un nom automatique sans doublons
+	private String nomImage; //généré un nom automatique sans doublons
 	
 	// constructeurs
 	public Annonce() {	
 	}
 
-	public Annonce (String titre,int prix , String categorie, String description,List<String> nomImage) {
+	public Annonce (String titre,int prix , String categorie, String description,String nomImage) {
 		 this.titre=titre;
 		 this.prix=prix;
 		 this.categorie=categorie; 
@@ -50,7 +50,11 @@ public class Annonce {
 	   session.save(annonce);
 	   session.getTransaction().commit();	      
 	   session.close();
+	 
 	}
+	
+	
+
 	
 	// Getters and setters
 	
@@ -94,11 +98,11 @@ public class Annonce {
 		this.description = description;
 	}
 
-	public List<String> getNomImage() {
+	public String getNomImage() {
 		return nomImage;
 	}
 
-	public void setNomImage(List<String> nomImage) {
+	public void setNomImage(String nomImage) {
 		this.nomImage = nomImage;
 	}
 	

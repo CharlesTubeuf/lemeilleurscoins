@@ -108,7 +108,7 @@
 	<!-- debut formulaire d'annonce -->
 
 
-	<form class="was-validated" action="ConstructeurAnnonce" method="get">
+	<form class="was-validated" action="ConstructeurAnnonce" method="post" enctype="multipart/form-data">
 	
 	<div class="form-group">
 			<label for="exampleFormControlSelect1">Catégorie</label> <select
@@ -140,7 +140,7 @@
   <div class="mb-3">
     <div >
       <label for="validationTooltip01">Prix</label>
-      <input type="number" class="form-control" id="validationTooltip01" name="prix"    placeholder="€" required>
+      <input type="number" class="form-control" id="validationTooltip01" placeholder="€"  name="prix"   required>
     <div class="invalid-feedback">
       Veuillez entrez un prix.
     </div>
@@ -157,7 +157,7 @@
 
 
   
-
+<button type="submit" class="btn btn-primary">Créer l'annonce</button>
 
 
  
