@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import beans.Compte;
+
 public class Connexion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -18,28 +20,35 @@ public class Connexion extends HttpServlet {
 		String pseudo = request.getParameter("pseudo");
 		String mdp = request.getParameter("mdp");
 		
+		
 		if(pseudo == null)
 		{
-			System.out.println("boursouflure dégueux que je vais supprimer pour ne pas assumer");
 			pseudo = "";
 			mdp = "";
 		}
 
 		boolean connect = beans.Compte.connexionCompte(pseudo, mdp);
-		String pageCo = "co";
-		request.setAttribute("pageCo", pageCo);
+//		String pageCo = "co";
+//		request.setAttribute("pageCo", pageCo);
 		
 		if (connect == true) {
 
+			// ON ENVOYE TOUTES LES DONNEES DU COMPTE
+			Compte compte = Compte.getCompte(pseudo);
 			HttpSession session = request.getSession();
-			session.setAttribute("pseudo", pseudo);
+			session.setAttribute("compte", compte);
+			
+			
+			// AVANT ON ENVOYAIS JUSTE LE PSEUDO
+//			HttpSession session = request.getSession();
+//			session.setAttribute("pseudo", pseudo);
 
-			this.getServletContext().getRequestDispatcher("/compte.jsp").forward(request, response);
+			this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
 			// ouverture de la session du connecté
 
 		} else {
-			request.setAttribute("formulaireInscription", true);
-
+		//	request.setAttribute("formulaireInscription", true);
+			request.setAttribute("connect", connect);
 			this.getServletContext().getRequestDispatcher("/connexion.jsp").forward(request, response);
 		}
 	}

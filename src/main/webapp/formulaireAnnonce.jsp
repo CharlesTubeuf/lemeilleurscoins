@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<!--debut navbar  -->
+<!--debut navbar  -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="./index.jsp">LeMeilleurCoin</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -28,10 +28,10 @@
 							Bienvenue
 							<c:out value="${sessionScope.pseudo}" />
 						</div> <span class="sr-only">(current)</span></a></li>
+						
 				<li class="nav-item"><a class="nav-link"
 					href="./formulaireAnnonce.jsp"> Déposer une annonce</a></li>
-
-
+						
 				<li class="nav-item"><a class="nav-link" href="#">Mes
 						recherches</a></li>
 
@@ -47,9 +47,16 @@
 		</div>
 	</nav>
 	<!--fin navbar  -->
-
+	
+	
 	<h4 class="text-center">Veuillez remplir les informations
 		concernants votre annonce</h4>
+
+
+    <!-- formulaire de dépot d'annonce -->
+
+
+		
 
 	<!-- <form>
 
@@ -145,6 +152,7 @@
   <div class="form-group">
     <label for="exampleFormControlFile1">Choisir une image</label>
     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="nomImage">
+
   </div>
 
 

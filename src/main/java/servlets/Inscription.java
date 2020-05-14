@@ -27,7 +27,7 @@ public class Inscription extends HttpServlet {
 		/////////////////////////// INSTANCIE UN COMPTE AVEC LE FORMULAIRE
 		/////////////////////////// //////////////////////////////////
 		beans.Compte leCompte = new beans.Compte(pseudo, mail, mdp);
-		System.out.println(leCompte);
+	
 		/////////////////////////// AJOUT DU COMPTE A LA BASE SQL SI PAS EXISTANT
 		/////////////////////////// /////////////////////////
 		// la méthode vérifie que le pseudo n'existe pas déjà, s'il existe msg dans la

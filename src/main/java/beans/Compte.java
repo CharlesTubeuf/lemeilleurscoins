@@ -101,6 +101,18 @@ public static boolean connexionCompte(String pseudo, String mdp) {
 	session.close();
 	return connect;
 }
+
+public static Compte getCompte(String pseudo) {
+	
+	Configuration config = new Configuration();
+	SessionFactory sessionFactory = config.configure().buildSessionFactory();
+	Session session = sessionFactory.openSession();
+	
+	List<Compte> listCompte = session.createQuery("from Compte C where C.pseudo ='"+pseudo+"'").list();
+	Compte compte = listCompte.get(0);
+	System.out.println(compte);   // VERIFIE DANS LA CONSOLE QUE LE COMPTE A ETE RECUPERER
+	return compte;
+}
  // getters et setters 
 public int getId() {
 	return id;
