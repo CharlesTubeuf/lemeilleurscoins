@@ -55,7 +55,7 @@
 	<!-- debut connexion -->
 	<c:if test="${creer==true}"> Le compte à bien été creer, veuillez vous connecter... </c:if>
 	<br />
-	<c:if test="${connect==false}"> OUPS... le MDP ou le pseudo est incorrect, veuillez vous inscrire... </c:if>
+	<c:if test="${connect==false}"> OUPS... le MDP ou le pseudo est incorrect, veuillez recommencer... </c:if>
 
 
 
@@ -73,7 +73,7 @@
 					<div class="form-group">
 						<label for="mail">Email</label> <input type="email"
 							class="form-control" id="exampleInputEmail1"
-							aria-describedby="emailHelp" name="email" required>
+							aria-describedby="emailHelp" name="mail" required>
 
 					</div>
 

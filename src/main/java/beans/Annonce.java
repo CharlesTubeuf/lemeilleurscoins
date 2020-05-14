@@ -19,7 +19,7 @@ public class Annonce {
 	
 	private String titre;
 	private int prix;
-	private String catégorie;
+	private String categorie;
 	private String description;
 	private List<String> nomImage; //généré un nom automatique sans doublon
 	

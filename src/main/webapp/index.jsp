@@ -33,7 +33,7 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link"
+				<li class="nav-item active"><a class="nav-link  "
 					href="./connexion.jsp">Se connecter<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="#">Mes
@@ -193,7 +193,7 @@
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <footer>
-     <div class="container-fluid p-3 mb-2 bg-primary text-white">
+     <div class="container-fluid p-3 mb-2 bg-dark text-white">
     <div class="container">
       <div class="row">
         <div class="col-md-7">
