@@ -28,6 +28,12 @@
   	<description></description>
   	<servlet-class>servlets.ConstructeurAnnonce</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>DestroySession</servlet-name>
+  	<display-name>DestroySession</display-name>
+  	<description></description>
+  	<servlet-class>servlets.DestroySession</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Index</servlet-name>
   	<url-pattern>/Index</url-pattern>
@@ -43,5 +49,9 @@
   <servlet-mapping>
   	<servlet-name>ConstructeurAnnonce</servlet-name>
   	<url-pattern>/ConstructeurAnnonce</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DestroySession</servlet-name>
+  	<url-pattern>/DestroySession</url-pattern>
   </servlet-mapping>
 </web-app>

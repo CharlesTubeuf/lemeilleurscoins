@@ -13,7 +13,6 @@
 <title>Page d'acceuil</title>
 </head>
 <body>
-
 	<!--debut navbar  -->
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -26,22 +25,49 @@
 		</button>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto"> 
-			<!-- ////////////////////// afficher que personne n'est connecté -->
-			<c:if test="${!empty sessionScope.sessionUtilisateur.pseudo}"> 
-				<li class="nav-item active"><a class="nav-link  "
-					href="./connexion.jsp">Se connecter<span class="sr-only">(current)</span></a>
-				</li>
-			</c:if>
-				
-				<li class="nav-item"><a class="nav-link" href="#">Mes
-						recherches</a></li>
+			<ul class="navbar-nav mr-auto">
 
-				<li class="nav-item"><a class="nav-link" href="#">Favoris</a></li>
 
-				<li class="nav-item"><a class="nav-link" href="#">Messages</a>
-				</li>
+				<c:if test="${empty sessionScope.compte}">
+					<li class="nav-item active"><a class="nav-link  "
+						href="./connexion.jsp">Se connecter<span class="sr-only">(current)</span></a>
+					</li>
+				</c:if>
+
+				<c:if test="${!empty sessionScope.compte}">
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						role="button" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false"> Mon compte </a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="./compte.jsp">Accéder à mon
+								compte</a> <a class="dropdown-item" href="#">Mes annonces</a> <a
+								class="dropdown-item" href="#">Déposer une annonce</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="DestroySession">Se déconnecter</a>
+						</div></li>
+				</c:if>
 				
+				<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search"
+							placeholder="Rechercher" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Que
+							recherchez-vous?</button>
+						<input class="form-control mr-sm-2" type="search"
+							placeholder="Localisation" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Saisissez
+							une localisation</button>
+						<a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> Catégories 
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Multimédias</a> <a
+							class="dropdown-item" href="#">Instruments de musique</a>
+						</div>
+					</form>
+
 			</ul>
 			<a class="navbar-brand" href="#"> <img src="img/payment.png"
 				alt="..." style="width: 5rem;">
@@ -49,48 +75,11 @@
 
 		</div>
 	</nav>
-	
+
 	<!--fin navbar  -->
 
 	<h5 class="text-center p-3 mb-2 bg-primary text-white">Trouvez la
 		bonne affaire parmi les millions de petites annonces LeMeilleurCoin</h5>
-
-
-	<!--debut de la barre de recherche -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> Catégories </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Multimédias</a> <a
-							class="dropdown-item" href="#">Instruments de musique</a>
-
-					</div>
-					<form class="form-inline my-2 my-lg-0">
-						<input class="form-control mr-sm-2" type="search"
-							placeholder="Rechercher" aria-label="Search">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Que
-							recherchez-vous?</button>
-					</form>
-
-					<form class="form-inline my-2 my-lg-0">
-						<input class="form-control mr-sm-2" type="search"
-							placeholder="Localisation" aria-label="Search">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Saisissez
-							une localisation</button>
-					</form>
-			</ul>
-
-		</div>
-	</nav>
-	<!--fin de la barre de recherche  -->
-
 
 
 
@@ -184,61 +173,76 @@
 
 
 	<!-- debut footer  -->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+	<link
+		href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		rel="stylesheet" id="bootstrap-css">
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
 
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link
+		href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		rel="stylesheet">
 
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<footer>
-     <div class="container-fluid p-3 mb-2 bg-dark text-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-            <div class="row py-0">
-          <div class="col-sm-1 hidden-md-down">
-              <a class="bg-circle bg-info" href="#">
-                <i class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
-              </a>
-            </div>
-            <div class="col-sm-11 text-white">
-                <div><h4>  Contact</h4>
-                    <p>   <span class="header-font">M</span>y<span class="header-font"></span>LeMeilleurCoin.com</p>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-5">
-          <div class="d-inline-block">
-            <div class="bg-circle-outline d-inline-block" style="background-color:#3b5998">
-              <a href="https://www.facebook.com/"><i class="fa fa-2x fa-fw fa-facebook text-white"></i>
-		</a>
-            </div>
-            <div class="bg-circle-outline d-inline-block" style="background-color:#4099FF">
-              <a href="https://twitter.com/">
-                <i class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
-            </div>
+	<link
+		href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+		rel="stylesheet">
+	<footer>
+		<div class="container-fluid p-3 mb-2 bg-dark text-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="row py-0">
+							<div class="col-sm-1 hidden-md-down">
+								<a class="bg-circle bg-info" href="#"> <i
+									class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
+								</a>
+							</div>
+							<div class="col-sm-11 text-white">
+								<div>
+									<h4>  Contact</h4>
+									<p>
+										   <span class="header-font">M</span>y<span
+											class="header-font"></span>LeMeilleurCoin.com
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="d-inline-block">
+							<div class="bg-circle-outline d-inline-block"
+								style="background-color: #3b5998">
+								<a href="https://www.facebook.com/"><i
+									class="fa fa-2x fa-fw fa-facebook text-white"></i> </a>
+							</div>
+							<div class="bg-circle-outline d-inline-block"
+								style="background-color: #4099FF">
+								<a href="https://twitter.com/"> <i
+									class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
+							</div>
 
-            <div class="bg-circle-outline d-inline-block" style="background-color:#0077B5">
-              <a href="https://www.linkedin.com/company/">
-                <i class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
-            </div>
-            <div class="bg-circle-outline d-inline-block" style="background-color:#d34836">
-              <a href="https://www.google.com/">
-                <i class="fa fa-2x fa-fw fa-google text-white"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p class="text-center"> Copyright © LeMeilleurCoin.com </p>
-    </div>
-</footer>
-    <!--/.footer-->
+							<div class="bg-circle-outline d-inline-block"
+								style="background-color: #0077B5">
+								<a href="https://www.linkedin.com/company/"> <i
+									class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
+							</div>
+							<div class="bg-circle-outline d-inline-block"
+								style="background-color: #d34836">
+								<a href="https://www.google.com/"> <i
+									class="fa fa-2x fa-fw fa-google text-white"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="text-center">Copyright © LeMeilleurCoin.com</p>
+		</div>
+	</footer>
+	<!--/.footer-->
 
-    <!--/.footer-bottom--> 
+	<!--/.footer-bottom-->
 	<!-- fin footer -->
 
 
