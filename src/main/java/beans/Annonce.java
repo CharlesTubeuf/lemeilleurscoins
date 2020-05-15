@@ -25,18 +25,18 @@ public class Annonce {
 	private int prix;
 	private String categorie;
 	private String description;
-	private String nomImage; //généré un nom automatique sans doublons
+//	private String nomImage; //généré un nom automatique sans doublons
 	
 	// constructeurs
 	public Annonce() {	
 	}
 
-	public Annonce (String titre,int prix , String categorie, String description,String nomImage) {
+	public Annonce (String titre,int prix , String categorie, String description/*,String nomImage*/) {
 		 this.titre=titre;
 		 this.prix=prix;
 		 this.categorie=categorie; 
 		 this.description=description;
-		 this.nomImage=nomImage;
+//		 this.nomImage=nomImage;
 	}
 	
 	// Méthodes
@@ -98,13 +98,13 @@ public class Annonce {
 		this.description = description;
 	}
 
-	public String getNomImage() {
-		return nomImage;
-	}
-
-	public void setNomImage(String nomImage) {
-		this.nomImage = nomImage;
-	}
+//	public String getNomImage() {
+//		return nomImage;
+//	}
+//
+//	public void setNomImage(String nomImage) {
+//		this.nomImage = nomImage;
+//	}
 	
 	
 	

@@ -10,9 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import services.Fichier;
 import services.UploadForm;
 
+@SuppressWarnings("serial")
 public class Upload extends HttpServlet {
-    public static final String CHEMIN      = "chemin";
-
     public static final String ATT_FICHIER = "fichier";
     public static final String ATT_FORM    = "form";
 
@@ -24,11 +23,11 @@ public class Upload extends HttpServlet {
     }
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
-        /*
-         * Lecture du paramètre 'chemin' passé à la servlet via la déclaration
-         * dans le web.xml
-         */
-        String chemin = this.getServletConfig().getInitParameter( CHEMIN );
+
+    	/* Chemin vers le dossier où vous voulez enregistrer le fichier */
+        String chemin = "C:\\Users\\PC 28\\eclipse-JEE-workspacesrc\\main\\webapp\\images\\";
+        //Exemple
+        //String chemin = "D:\\Zone de Nix\\OneDrive\\Technique\\Workspaces\\JavaEE\\UploadFichiers\\src\\main\\webapp\\images\\";
 
         /* Préparation de l'objet formulaire */
         UploadForm form = new UploadForm();

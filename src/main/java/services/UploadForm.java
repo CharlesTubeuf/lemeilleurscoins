@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
 
 public final class UploadForm {
-    private static final String CHAMP_DESCRIPTION = "description";
     private static final String CHAMP_FICHIER     = "fichier";
     private static final int    TAILLE_TAMPON     = 10240;                        // 10 ko
 
@@ -33,9 +32,6 @@ public final class UploadForm {
         /* Initialisation du bean représentant un fichier */
         Fichier fichier = new Fichier();
 
-        /* Récupération du champ de description du formulaire */
-        String description = getValeurChamp( request, CHAMP_DESCRIPTION );
-
         /*
          * Récupération du contenu du champ fichier du formulaire. Il faut ici
          * utiliser la méthode getPart(), comme nous l'avions fait dans notre
@@ -51,6 +47,7 @@ public final class UploadForm {
              * getNomFichier().
              */
             nomFichier = getNomFichier( part );
+            System.out.println("nomfichier : "+nomFichier);
 
             /*
              * Si la méthode a renvoyé quelque chose, il s'agit donc d'un
@@ -105,13 +102,6 @@ public final class UploadForm {
 
         /* Si aucune erreur n'est survenue jusqu'à présent */
         if ( erreurs.isEmpty() ) {
-            /* Validation du champ de description. */
-            try {
-                validationDescription( description );
-            } catch ( Exception e ) {
-                setErreur( CHAMP_DESCRIPTION, e.getMessage() );
-            }
-            fichier.setDescription( description );
 
             /* Validation du champ fichier. */
             try {
@@ -143,19 +133,6 @@ public final class UploadForm {
     }
 
     /*
-     * Valide la description saisie.
-     */
-    private void validationDescription( String description ) throws Exception {
-        if ( description != null ) {
-            if ( description.length() < 15 ) {
-                throw new Exception( "La phrase de description du fichier doit contenir au moins 15 caractères." );
-            }
-        } else {
-            throw new Exception( "Merci d'entrer une phrase de description du fichier." );
-        }
-    }
-
-    /*
      * Valide le fichier envoyé.
      */
     private void validationFichier( String nomFichier, InputStream contenuFichier ) throws Exception {
@@ -169,19 +146,6 @@ public final class UploadForm {
      */
     private void setErreur( String champ, String message ) {
         erreurs.put( champ, message );
-    }
-
-    /*
-     * Méthode utilitaire qui retourne null si un champ est vide, et son contenu
-     * sinon.
-     */
-    private static String getValeurChamp( HttpServletRequest request, String nomChamp ) {
-        String valeur = request.getParameter( nomChamp );
-        if ( valeur == null || valeur.trim().length() == 0 ) {
-            return null;
-        } else {
-            return valeur;
-        }
     }
 
     /*

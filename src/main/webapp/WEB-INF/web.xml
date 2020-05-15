@@ -58,59 +58,46 @@
 	<!-- Pour le transfert d'image -->
 
 	
-	<servlet>
-
-		<servlet-name>Upload</servlet-name>
-
-		<display-name>Upload</display-name>
-
-		<description />
-
-		<servlet-class>servlets.Upload</servlet-class>
-
-
 	
-		<init-param>
+-<servlet>
 
-			<param-name>chemin</param-name>
+<servlet-name>Upload</servlet-name>
 
-			<param-value>/fichiers/</param-value>
+<display-name>Upload</display-name>
 
-		</init-param>
+<description/>
 
-
-		
-		<multipart-config>
-
-			<location>c:/fichiers</location>
-
-			<max-file-size>10485760</max-file-size>
-
-			<!-- 10 Mo -->
+<servlet-class>servlets.Upload</servlet-class>
 
 
-			<max-request-size>52428800</max-request-size>
+-<multipart-config>
 
-			<!-- 5 x 10 Mo -->
+<max-file-size>10485760</max-file-size>
 
-
-			<file-size-threshold>1048576</file-size-threshold>
-
-			<!-- 1 Mo -->
+<!-- 10 Mo -->
 
 
-		</multipart-config>
+<max-request-size>52428800</max-request-size>
 
-	</servlet>
+<!-- 5 x 10 Mo -->
 
 
-	
-	<servlet-mapping>
+<file-size-threshold>1048576</file-size-threshold>
 
-		<servlet-name>Upload</servlet-name>
+<!-- 1 Mo -->
 
-		<url-pattern>/Upload</url-pattern>
 
-	</servlet-mapping>
+</multipart-config>
+
+</servlet>
+
+
+-<servlet-mapping>
+
+<servlet-name>Upload</servlet-name>
+
+<url-pattern>/Upload</url-pattern>
+
+</servlet-mapping>
 
 </web-app>

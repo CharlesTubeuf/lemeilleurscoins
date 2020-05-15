@@ -31,10 +31,10 @@ public class ConstructeurAnnonce extends HttpServlet {
         int prix = Integer.parseInt(request.getParameter("prix"));
 		String categorie = request.getParameter("categorie");
 		String description = request.getParameter("description");
-		String nomImage = request.getParameter("nomImage");
+//		String nomImage = request.getParameter("nomImage");
 		
 		
-		Annonce annonce = new Annonce(titre,prix,categorie, description,nomImage);
+		Annonce annonce = new Annonce(titre,prix,categorie, description/*,nomImage*/);
 		
     	Annonce.saveAnnonce(annonce);
 		HttpSession session = request.getSession();
