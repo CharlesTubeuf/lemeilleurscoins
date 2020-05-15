@@ -98,6 +98,12 @@ public class Annonce {
 		this.description = description;
 	}
 
+	@Override
+	public String toString() {
+		return "Annonce [id=" + id + ", titre=" + titre + ", prix=" + prix + ", categorie=" + categorie
+				+ ", description=" + description + "]";
+	}
+
 //	public String getNomImage() {
 //		return nomImage;
 //	}
