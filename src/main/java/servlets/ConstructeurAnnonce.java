@@ -45,7 +45,8 @@ public class ConstructeurAnnonce extends HttpServlet {
 		this.getServletContext().getRequestDispatcher("/formulaireAnnonce.jsp").forward(request, response);
 		
 		
-		//essaie dans le servlet pour le transfert d'image!
+		// Le transfert d'image!
+		
 		
 
 		doGet(request, response);
