@@ -28,7 +28,7 @@ public class Upload extends HttpServlet {
 
     	/* Chemin vers le dossier où vous voulez enregistrer le fichier */
 
-        String chemin = "C:\\Users\\PC 32\\Desktop\\workspace jee\\ProjetFin\\src\\main\\webapp\\images\\";
+        String chemin = "C:\\Users\\PC 28\\Desktop\\workspace jee\\ProjetFin\\src\\main\\webapp\\images\\";
 
         //Exemple
         //String chemin = "D:\\Zone de Nix\\OneDrive\\Technique\\Workspaces\\JavaEE\\UploadFichiers\\src\\main\\webapp\\images\\";
