@@ -25,18 +25,18 @@ public class Annonce {
 	private int prix;
 	private String categorie;
 	private String description;
-//	private String nomImage; //généré un nom automatique sans doublons
+	private String nomImage; 
 	
 	// constructeurs
 	public Annonce() {	
 	}
 
-	public Annonce (String titre,int prix , String categorie, String description/*,String nomImage*/) {
+	public Annonce (String titre,int prix , String categorie, String description,String nomImage) {
 		 this.titre=titre;
 		 this.prix=prix;
 		 this.categorie=categorie; 
 		 this.description=description;
-//		 this.nomImage=nomImage;
+	 this.nomImage=nomImage;
 	}
 	
 	// Méthodes
@@ -44,12 +44,12 @@ public class Annonce {
 	public static void saveAnnonce (Annonce annonce) {
 		Configuration config = new Configuration();
 		SessionFactory sessionFactory = config.configure().buildSessionFactory();
-		Session session = sessionFactory.openSession();
+		Session sessionSaveAnnonce = sessionFactory.openSession();
 		
-	   session.beginTransaction();
-	   session.save(annonce);
-	   session.getTransaction().commit();	      
-	   session.close();
+		sessionSaveAnnonce.beginTransaction();
+		sessionSaveAnnonce.save(annonce);
+		sessionSaveAnnonce.getTransaction().commit();	      
+		sessionSaveAnnonce.close();
 	 
 	}
 	
@@ -97,20 +97,21 @@ public class Annonce {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
 
 	@Override
 	public String toString() {
 		return "Annonce [id=" + id + ", titre=" + titre + ", prix=" + prix + ", categorie=" + categorie
-				+ ", description=" + description + "]";
+				+ ", description=" + description + ", nomImage=" + nomImage + "]";
 	}
 
-//	public String getNomImage() {
-//		return nomImage;
-//	}
-//
-//	public void setNomImage(String nomImage) {
-//		this.nomImage = nomImage;
-//	}
+	public String getNomImage() {
+		return nomImage;
+	}
+
+	public void setNomImage(String nomImage) {
+		this.nomImage = nomImage;
+	}
 	
 	
 	

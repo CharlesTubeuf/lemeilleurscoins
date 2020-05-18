@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
 import beans.Annonce;
 import services.Fichier;
 import services.UploadForm;
@@ -20,23 +21,30 @@ public class Upload extends HttpServlet {
     public static final String VUE         = "/WEB-INF/formulaireUpload.jsp";
 
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
+
         /* Affichage de la page d'upload */
+
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
     }
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 
+
     	/* Chemin vers le dossier oÃ¹ vous voulez enregistrer le fichier */
+
 
         String chemin = "C:\\images\\";
 
         //Exemple
         //String chemin = "D:\\Zone de Nix\\OneDrive\\Technique\\Workspaces\\JavaEE\\UploadFichiers\\src\\main\\webapp\\images\\";
 
+
         /* PrÃ©paration de l'objet formulaire */
         UploadForm form = new UploadForm();
 
         /* Traitement de la requÃªte et rÃ©cupÃ©ration du bean en rÃ©sultant */
+
+
         Fichier fichier = form.enregistrerFichier( request, chemin );
 
         /* Stockage du formulaire et du bean dans l'objet request */
@@ -49,12 +57,18 @@ public class Upload extends HttpServlet {
         int prix = Integer.parseInt(request.getParameter("prix"));
 		String categorie = request.getParameter("categorie");
 		String description = request.getParameter("description");
-//		String nomImage = request.getParameter("nomImage");
+
 		
 		
-		Annonce annonce = new Annonce(titre,prix,categorie,description/*,nomImage*/);
+		System.out.println("chemin est "+chemin);
+		String nomImage = chemin+form.leNomImage;
+		System.out.println("le nomImage est : "+nomImage);
+
 		
-		System.out.println("beanAnnonceCreer");
+		
+		Annonce annonce = new Annonce(titre,prix,categorie, description,nomImage);
+		
+
 		
     	Annonce.saveAnnonce(annonce);
     	System.out.println("beanAnnoncesauvegarder");
