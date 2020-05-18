@@ -18,7 +18,7 @@ public class Upload extends HttpServlet {
     public static final String ATT_FICHIER = "fichier";
     public static final String ATT_FORM    = "form";
 
-    public static final String VUE         = "/WEB-INF/formulaireUpload.jsp";
+    public static final String VUE         = "/formulaireUpload.jsp";
 
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 
@@ -56,27 +56,23 @@ public class Upload extends HttpServlet {
         String titre = request.getParameter("titre");
         int prix = Integer.parseInt(request.getParameter("prix"));
 		String categorie = request.getParameter("categorie");
-		String description = request.getParameter("description");
-
-		
-		
-		System.out.println("chemin est "+chemin);
+		String description = request.getParameter("description");		
+		// nom image est le lien jusqu'à l'image sur l'ordinateur. 
 		String nomImage = chemin+form.leNomImage;
 		System.out.println("le nomImage est : "+nomImage);
-
 		
 		
-		Annonce annonce = new Annonce(titre,prix,categorie, description,nomImage);
+		// récupération du compte actif
+		
+		beans.Compte compte = (beans.Compte) request.getAttribute("compte");
+		System.out.println(compte);
+		
+		// Création du Bean annonce. 
+		Annonce annonce = new Annonce(titre, prix, categorie, description, nomImage, compte);
 		
 
 		
     	Annonce.saveAnnonce(annonce);
-    	System.out.println("beanAnnoncesauvegarder");
-    	
-		HttpSession sessionAnnonce = request.getSession();
-		
-		
-		request.setAttribute("NouvelleAnnonce", annonce);
         
         
         

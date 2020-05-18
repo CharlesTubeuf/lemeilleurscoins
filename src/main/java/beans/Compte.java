@@ -1,5 +1,6 @@
 package beans;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.*;
@@ -27,9 +28,16 @@ private String mail;
 @Column (name = "mdp")
 private String mdp;
 
- // constructeur
+@OneToMany (cascade = {CascadeType.ALL}, orphanRemoval = true)
+private List<Annonce> Annonces = new ArrayList<Annonce>() ;
+
+ // CONSTRUCTEUR
+
+
 public Compte() {	
 }
+
+
 
 public Compte (String pseudo,String mail, String mdp) {
 	this.pseudo=pseudo;
@@ -113,13 +121,27 @@ public static Compte getCompte(String pseudo) {
 	System.out.println(compte);   // VERIFIE DANS LA CONSOLE QUE LE COMPTE A ETE RECUPERER
 	return compte;
 }
- // getters et setters 
+
+
+
+ // getters et setters
+
+
+
 public int getId() {
 	return id;
 }
 
 public void setId(int id) {
 	this.id=id;
+}
+
+public List<Annonce> getAnnonces() {
+	return Annonces;
+}
+
+public void setAnnonces(List<Annonce> annonces) {
+	Annonces = annonces;
 }
 
 public String getPseudo() {

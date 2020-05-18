@@ -2,11 +2,14 @@ package beans;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.Session;
@@ -27,20 +30,27 @@ public class Annonce {
 	private String description;
 	private String nomImage; 
 	
+	@ManyToOne 
+	private Compte compte;
+	
 	// constructeurs
+	
+	
 	public Annonce() {	
 	}
 
-	public Annonce (String titre,int prix , String categorie, String description,String nomImage) {
+	public Annonce (String titre,int prix , String categorie, String description,String nomImage  ,Compte compte ) {
 		 this.titre=titre;
 		 this.prix=prix;
 		 this.categorie=categorie; 
 		 this.description=description;
-	 this.nomImage=nomImage;
+		 this.nomImage=nomImage;
+		 this.compte=compte;
 	}
 	
-	// Méthodes
+	// METHODES
 	
+
 	public static void saveAnnonce (Annonce annonce) {
 		Configuration config = new Configuration();
 		SessionFactory sessionFactory = config.configure().buildSessionFactory();
@@ -53,6 +63,12 @@ public class Annonce {
 	 
 	}
 	
+	@Override
+	public String toString() {
+		return "Annonce [id=" + id + ", titre=" + titre + ", prix=" + prix + ", categorie=" + categorie
+				+ ", description=" + description + ", nomImage=" + nomImage /* + ", compte=" + compte + "]" */;
+	}
+
 	
 
 	
@@ -97,12 +113,13 @@ public class Annonce {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
 
-	@Override
-	public String toString() {
-		return "Annonce [id=" + id + ", titre=" + titre + ", prix=" + prix + ", categorie=" + categorie
-				+ ", description=" + description + ", nomImage=" + nomImage + "]";
+	public Compte getCompte() {
+		return compte;
+	}
+
+	public void setCompte(Compte compte) {
+		this.compte = compte;
 	}
 
 	public String getNomImage() {
