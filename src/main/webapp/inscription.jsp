@@ -56,7 +56,7 @@
 					<div class="form-group">
 						<label for="mail">Email</label> <input type="email"
 							class="form-control" id="exampleInputEmail1"
-							aria-describedby="emailHelp" name="mail" required>
+							aria-describedby="emailHelp" name="mail" placeholder="name@example.com" required>
 
 					</div>
 
@@ -72,6 +72,26 @@
 							class="form-control" id="exampleInputPassword1" name="mdp"
 							required>
 					</div>
+					
+					<div class="form-group">
+						<label for="numTel">Numéro de téléphone</label> <input type="number"
+							class="form-control" id="exampleInputPassword1" name="numTel" placeholder="+33********"
+							required>
+					</div>
+					
+					<div class="form-group">
+						<label for="ville">Ville</label> <input type="text"
+							class="form-control" id="exampleInputPassword1" name="ville" placeholder="ex:Marseille"
+							required>
+					</div>
+					
+					<div class="form-group">
+						<label for="codePostal">Code postal</label> <input type="number"
+							class="form-control" id="exampleInputPassword1" name="codePostal" placeholder="ex:13005"
+							required>
+					</div>
+					
+					
 
 					<button type="submit" value="Inscription" class="btn btn-primary">Inscription</button>
 				</form>

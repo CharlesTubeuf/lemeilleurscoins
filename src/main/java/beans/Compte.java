@@ -28,6 +28,16 @@ private String mail;
 @Column (name = "mdp")
 private String mdp;
 
+@Column (name = "numTel")
+private int numTel ;
+
+@Column (name = "ville")
+private String ville ;
+
+@Column (name = "codePostal")
+private int codePostal;
+
+
 @OneToMany (cascade = {CascadeType.ALL}, orphanRemoval = true)
 private List<Annonce> Annonces = new ArrayList<Annonce>() ;
 
@@ -39,17 +49,21 @@ public Compte() {
 
 
 
-public Compte (String pseudo,String mail, String mdp) {
+
+
+
+public Compte (String pseudo,String mail, String mdp, int numTel,String ville, int codePostal) {
+
 	this.pseudo=pseudo;
 	this.mail=mail;
 	this.mdp=mdp;
+	this.numTel=numTel;
+	this.ville=ville;
+	this.codePostal=codePostal;
 }
 
  // METHODES ///////////////////////////////////////////////
-@Override
-public String toString() {
-	return "Compte [pseudo=" + pseudo + ", mail=" + mail + ", mdp=" + mdp + "]";
-}
+
 
 public static boolean verifExistant(Compte compte) {
 	boolean existe= false;
@@ -69,6 +83,12 @@ public static boolean verifExistant(Compte compte) {
 		}				
 	session.close();	
 	return existe;
+}
+
+@Override
+public String toString() {
+	return "Compte [id=" + id + ", pseudo=" + pseudo + ", mail=" + mail + ", mdp=" + mdp + ", numTel=" + numTel
+			+ ", ville=" + ville + ", codePostal=" + codePostal + "]";
 }
 
 public static boolean nouveauCompte (Compte leCompte) {
@@ -171,6 +191,30 @@ public String getMdp() {
 
 public void setMdp(String mdp) {
 	this.mdp = mdp;
+}
+
+public int getNumTel() {
+	return numTel;
+}
+
+public void setNumTel(int numTel) {
+	this.numTel = numTel;
+}
+
+public String getVille() {
+	return ville;
+}
+
+public void setVille(String ville) {
+	this.ville = ville;
+}
+
+public int getCodePostal() {
+	return codePostal;
+}
+
+public void setCodePostal(int codePostal) {
+	this.codePostal = codePostal;
 }
 
 
