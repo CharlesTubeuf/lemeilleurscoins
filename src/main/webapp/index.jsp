@@ -38,7 +38,8 @@
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 						role="button" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false"> Mon compte </a>
+						aria-expanded="false"> Bienvenue
+							<c:out value="${compte.pseudo}" /> </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="./compte.jsp">Accéder à mon
 								compte</a> <a class="dropdown-item" href="#">Mes annonces</a> <a
@@ -63,6 +64,9 @@
 
 	<h5 class="text-center p-3 mb-2 bg-primary text-white">Trouvez la
 		bonne affaire parmi les millions de petites annonces LeMeilleurCoin</h5>
+		
+		
+	
 
 	<!-- debut barre de recherche  -->
 

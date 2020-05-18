@@ -11,6 +11,11 @@ public class Compte extends HttpServlet {
        
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String pseudo = request.getParameter("pseudo");
+		
+	
+		request.setAttribute("pseudo", pseudo);
 
 		this.getServletContext().getRequestDispatcher("/compte.jsp").forward(request,response);
 	}

@@ -45,16 +45,36 @@
 		</div>
 	</nav>
 	<!--fin navbar  -->
+	
+	
+		<!-- debut information sur l'utilisateur -->
+		
+		<div class=" bg-secondary text-white text-center">
+	
+							Bienvenue
+							<c:out value="${compte.pseudo}" />
+							!
+							<br>
+							Email:
+							<c:out value="${compte.mail}" />
+							<br>
+							Numéro de télephone: 
+							<c:out value="${compte.numTel}" />
+							<br>
+							Ville: 
+							<c:out value="${compte.ville}" />
+						</div>
+		
+		<!--fin information sur l'utilisateur  -->
 
 	
 <h5 class="text-center p-3 mb-2 bg-primary text-white">Trouvez la
 		bonne affaire parmi les millions de petites annonces LeMeilleurCoin</h5>
 		
-		<div>BIENVENUE SUR VOTRE COMPTE BRAVO !!!!</div>
-	<div>faire apparetre les infos du compte et permettre de les
-		modifier... pouvoir ajouter une photo (optionnel), pouvoir ajouter un
-		numéro de téléphone, ect...</div>
-	<!--  faire un bouton déposer une annonce et envoyer vers la page déposer une annonce -->
+		
+	
+		
+	
 		
 
 

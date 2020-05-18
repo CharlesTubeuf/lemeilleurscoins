@@ -18,7 +18,7 @@ public class Upload extends HttpServlet {
     public static final String ATT_FICHIER = "fichier";
     public static final String ATT_FORM    = "form";
 
-    public static final String VUE         = "/WEB-INF/formulaireUpload.jsp";
+    public static final String VUE         = "/formulaireUpload.jsp";
 
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 

@@ -23,10 +23,13 @@ public class Inscription extends HttpServlet {
 		String pseudo = request.getParameter("pseudo");
 		String mail = request.getParameter("mail");
 		String mdp = request.getParameter("mdp");
+		int numTel =  Integer.parseInt(request.getParameter("numTel"));
+		String ville = request.getParameter("ville");
+		int codePostal =  Integer.parseInt(request.getParameter("codePostal"));
 
 		/////////////////////////// INSTANCIE UN COMPTE AVEC LE FORMULAIRE
 		/////////////////////////// //////////////////////////////////
-		beans.Compte leCompte = new beans.Compte(pseudo, mail, mdp);
+		beans.Compte leCompte = new beans.Compte(pseudo, mail, mdp,numTel,ville,codePostal);
 	
 		/////////////////////////// AJOUT DU COMPTE A LA BASE SQL SI PAS EXISTANT
 		/////////////////////////// /////////////////////////
