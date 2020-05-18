@@ -42,31 +42,14 @@
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="./compte.jsp">Accéder à mon
 								compte</a> <a class="dropdown-item" href="#">Mes annonces</a> <a
-								class="dropdown-item" href="#">Déposer une annonce</a>
+								class="dropdown-item" href="./formulaireUpload.jsp">Déposer
+								une annonce</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="DestroySession">Se déconnecter</a>
 						</div></li>
 				</c:if>
-				
-				<form class="form-inline my-2 my-lg-0">
-						<input class="form-control mr-sm-2" type="search"
-							placeholder="Rechercher" aria-label="Search">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Que
-							recherchez-vous?</button>
-						<input class="form-control mr-sm-2" type="search"
-							placeholder="Localisation" aria-label="Search">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Saisissez
-							une localisation</button>
-						<a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> Catégories 
-				</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Multimédias</a> <a
-							class="dropdown-item" href="#">Instruments de musique</a>
-						</div>
-					</form>
+
+
 
 			</ul>
 			<a class="navbar-brand" href="#"> <img src="img/payment.png"
@@ -81,7 +64,32 @@
 	<h5 class="text-center p-3 mb-2 bg-primary text-white">Trouvez la
 		bonne affaire parmi les millions de petites annonces LeMeilleurCoin</h5>
 
+	<!-- debut barre de recherche  -->
 
+
+	<form class="form-inline my-2 my-lg-0">
+
+		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			<a class="dropdown-item" href="#">Multimédias</a> <a
+				class="dropdown-item" href="#">Instruments de musique</a>
+		</div>
+
+		<input class="form-control mr-sm-2" type="search"
+			placeholder="Rechercher" aria-label="Search">
+		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Que
+			recherchez-vous?</button>
+		<input class="form-control mr-sm-2" type="search"
+			placeholder="Localisation" aria-label="Search">
+		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Saisissez
+			une localisation</button>
+		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+			role="button" data-toggle="dropdown" aria-haspopup="true"
+			aria-expanded="false"> Catégories </a>
+
+	</form>
+
+
+	<!--fin barre de recherche  -->
 
 	<!-- debut du carousel -->
 

@@ -15,6 +15,7 @@
 		
 		<!-- Seront indiqués ici les fichiers de mapping -->
 		<mapping class="beans.Compte"/>
+		<mapping class="beans.Annonce"/>
 		
 	</session-factory>
 </hibernate-configuration>

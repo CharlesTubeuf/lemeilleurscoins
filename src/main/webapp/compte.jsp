@@ -33,16 +33,10 @@
 						</div>
 						<span class="sr-only">(current)</span></a></li>
 				<li class="nav-item"><a class="nav-link"
-					href="./formulaireAnnonce.jsp"> Déposer une annonce</a></li>
+					href="./formulaireUpload.jsp"> Déposer une annonce</a></li>
 
 
-				<li class="nav-item"><a class="nav-link" href="#">Mes
-						recherches</a></li>
-
-				<li class="nav-item"><a class="nav-link" href="#">Favoris</a></li>
-
-				<li class="nav-item"><a class="nav-link" href="#">Messages</a>
-				</li>
+				
 			</ul>
 			<a class="navbar-brand" href="#"> <img src="img/payment.png"
 				alt="..." style="width: 5rem;">
@@ -64,41 +58,32 @@
 		
 
 
-	<!--debut de la barre de recherche -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- debut barre de recherche  -->
 
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
+	<form class="form-inline my-2 my-lg-0">
 
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> Catégories </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Multimédias</a> <a
-							class="dropdown-item" href="#">Instruments de musique</a>
-
-					</div>
-					<form class="form-inline my-2 my-lg-0">
-						<input class="form-control mr-sm-2" type="search"
-							placeholder="Rechercher" aria-label="Search">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Que
-							recherchez-vous?</button>
-					</form>
-
-					<form class="form-inline my-2 my-lg-0">
-						<input class="form-control mr-sm-2" type="search"
-							placeholder="Localisation" aria-label="Search">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Saisissez
-							une localisation</button>
-					</form>
-			</ul>
-
+		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			<a class="dropdown-item" href="#">Multimédias</a> <a
+				class="dropdown-item" href="#">Instruments de musique</a>
 		</div>
-	</nav>
-	<!--fin de la barre de recherche  -->
 
+		<input class="form-control mr-sm-2" type="search"
+			placeholder="Rechercher" aria-label="Search">
+		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Que
+			recherchez-vous?</button>
+		<input class="form-control mr-sm-2" type="search"
+			placeholder="Localisation" aria-label="Search">
+		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Saisissez
+			une localisation</button>
+		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+			role="button" data-toggle="dropdown" aria-haspopup="true"
+			aria-expanded="false"> Catégories </a>
+
+	</form>
+
+
+	<!--fin barre de recherche  -->
 
 
 
@@ -201,7 +186,7 @@
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <footer>
-     <div class="container-fluid p-3 mb-2 bg-primary text-white">
+     <div class="container-fluid p-3 mb-2 bg-dark text-white">
     <div class="container">
       <div class="row">
         <div class="col-md-7">
