@@ -27,7 +27,7 @@ public class Upload extends HttpServlet {
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 
     	/* Chemin vers le dossier où vous voulez enregistrer le fichier */
-        String chemin = "C:\\Users\\PC 28\\eclipse-JEE-workspace\\ProjetFin\\src\\main\\webapp\\images";
+        String chemin = "C:\\Users\\PC 28\\eclipse-JEE-workspace\\ProjetFin\\src\\main\\webapp\\images\\";
         //Exemple
         //String chemin = "D:\\Zone de Nix\\OneDrive\\Technique\\Workspaces\\JavaEE\\UploadFichiers\\src\\main\\webapp\\images\\";
 
