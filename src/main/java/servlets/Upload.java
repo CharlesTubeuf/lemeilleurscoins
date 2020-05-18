@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
 import beans.Annonce;
 import services.Fichier;
 import services.UploadForm;
@@ -20,7 +21,7 @@ public class Upload extends HttpServlet {
     public static final String VUE         = "/WEB-INF/formulaireUpload.jsp";
 
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
-        /* Affichage de la page d'upload */
+       /* Affichage de la page d'upload */
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
     }
 
@@ -28,7 +29,7 @@ public class Upload extends HttpServlet {
 
     	/* Chemin vers le dossier où vous voulez enregistrer le fichier */
 
-        String chemin = "C:\\Users\\PC 28\\Desktop\\workspace jee\\ProjetFin\\src\\main\\webapp\\images\\";
+        String chemin = "C:\\images\\";
 
         //Exemple
         //String chemin = "D:\\Zone de Nix\\OneDrive\\Technique\\Workspaces\\JavaEE\\UploadFichiers\\src\\main\\webapp\\images\\";
@@ -49,12 +50,16 @@ public class Upload extends HttpServlet {
         int prix = Integer.parseInt(request.getParameter("prix"));
 		String categorie = request.getParameter("categorie");
 		String description = request.getParameter("description");
-//		String nomImage = request.getParameter("nomImage");
 		
 		
-		Annonce annonce = new Annonce("titre",5,"categorie", "description"/*,nomImage*/);
+		System.out.println("chemin est "+chemin);
+		String nomImage = chemin+form.leNomImage;
+		System.out.println("le nomImage est : "+nomImage);
+
 		
-		System.out.println("beanAnnonceCreer");
+		
+		Annonce annonce = new Annonce(titre,prix,categorie, description,nomImage);
+		
 		
     	Annonce.saveAnnonce(annonce);
     	System.out.println("beanAnnoncesauvegarder");

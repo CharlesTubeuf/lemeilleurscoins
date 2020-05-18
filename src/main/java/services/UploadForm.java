@@ -19,7 +19,9 @@ public final class UploadForm {
 
     private String              resultat;
     private Map<String, String> erreurs           = new HashMap<String, String>();
-
+    public static String leNomImage;
+    
+    
     public String getResultat() {
         return resultat;
     }
@@ -70,7 +72,12 @@ public final class UploadForm {
 
                 /* Récupération du contenu du fichier */
                 contenuFichier = part.getInputStream();
-
+                leNomImage = nomFichier;
+                
+                
+                
+                
+                
             }
         } catch ( IllegalStateException e ) {
             /*
