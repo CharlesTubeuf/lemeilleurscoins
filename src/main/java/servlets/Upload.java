@@ -6,7 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import beans.Annonce;
 import services.Fichier;
 import services.UploadForm;
 
@@ -25,7 +27,9 @@ public class Upload extends HttpServlet {
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 
     	/* Chemin vers le dossier où vous voulez enregistrer le fichier */
-        String chemin = "C:\\Users\\PC 32\\Desktop\\workspace jee\\ProjetFin\\src\\main\\webapp\\images";
+
+        String chemin = "C:\\Users\\PC 32\\Desktop\\workspace jee\\ProjetFin\\src\\main\\webapp\\images\\";
+
         //Exemple
         //String chemin = "D:\\Zone de Nix\\OneDrive\\Technique\\Workspaces\\JavaEE\\UploadFichiers\\src\\main\\webapp\\images\\";
 
@@ -38,6 +42,42 @@ public class Upload extends HttpServlet {
         /* Stockage du formulaire et du bean dans l'objet request */
         request.setAttribute( ATT_FORM, form );
         request.setAttribute( ATT_FICHIER, fichier );
+        
+        //Gestion du nouveau formulaire!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        String titre = request.getParameter("titre");
+        int prix = Integer.parseInt(request.getParameter("prix"));
+		String categorie = request.getParameter("categorie");
+		String description = request.getParameter("description");
+//		String nomImage = request.getParameter("nomImage");
+		
+		
+		Annonce annonce = new Annonce("titre",5,"categorie", "description"/*,nomImage*/);
+		
+		System.out.println("beanAnnonceCreer");
+		
+    	Annonce.saveAnnonce(annonce);
+    	System.out.println("beanAnnoncesauvegarder");
+    	
+		HttpSession sessionAnnonce = request.getSession();
+		
+		
+		request.setAttribute("NouvelleAnnonce", annonce);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
     }

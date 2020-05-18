@@ -34,11 +34,12 @@ public class ConstructeurAnnonce extends HttpServlet {
 //		String nomImage = request.getParameter("nomImage");
 		
 		
-		Annonce annonce = new Annonce(titre,prix,categorie, description/*,nomImage*/);
+Annonce annonce = new Annonce("titre",5,"categorie", "description"/*,nomImage*/);
+		
+		System.out.println("beanAnnonceCreer");
 		
     	Annonce.saveAnnonce(annonce);
-		HttpSession session = request.getSession();
-		session.setAttribute("Annonce", true);
+    	System.out.println("beanAnnoncesauvegarder");
 		
 		request.setAttribute("ConstructeurAnnonce", true);
 		
