@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<!--debut navbar  -->
+	<!--debut navbar  -->
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="./index.jsp">LeMeilleurCoin</a>
@@ -40,8 +40,9 @@
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 						role="button" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false"> Bienvenue
-							<c:out value="${compte.pseudo}" /> </a>
+						aria-expanded="false"> Bienvenue <c:out
+								value="${compte.pseudo}" />
+					</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="./compte.jsp">Accéder à mon
 								compte</a> <a class="dropdown-item" href="#">Mes annonces</a> <a
@@ -68,8 +69,8 @@
 	<!-- debut formulaire d'annonce -->
 
 
-	<form  class="needs-validation"  action="<c:url value="Upload" />" method="post"
-		enctype="multipart/form-data">
+	<form class="needs-validation" action="<c:url value="Upload" />"
+		method="post" enctype="multipart/form-data">
 		<fieldset>
 
 			<div class="form-group">
@@ -105,22 +106,22 @@
 					<label for="validationTooltip01">Prix</label> <input type="number"
 						class="form-control" id="validationTooltip01" placeholder="€"
 						name="prix" required>
-					<div class="invalid-feedback">Veuillez entrez un prix.</div>
+					<div class="invalid-feedback">Veuillez entrez un prix</div>
 				</div>
 
 
+		
 
 
 
 
 
+				<legend>Envoi de l'image</legend>
 
-				<legend>Envoi de fichier</legend>
 
-
-				<label for="fichier">Emplacement du fichier <span
+				<label for="fichier">Emplacement de l'image <span
 					class="requis">*</span></label> <input type="file" id="fichier"
-					name="fichier" value="<c:out value="${fichier.nom}"/>" /> <span
+					name="fichier" value="<c:out value="${fichier.nom}"/>" placeholder="" /> <span
 					class="erreur">${form.erreurs['fichier']}</span> <br /> <input
 					type="submit" value="Envoyer" class="sansLabel" /> <br />
 
@@ -131,24 +132,11 @@
 
 	<!-- fin formulaire d'annonce -->
 
-	<form class="was-validated" action="ConstructeurAnnonce" method="post"
-		enctype="multipart/form-data">
 
 
 
 
-
-
-		<!-- <button type="submit" class="btn btn-primary">Créer l'annonce</button> -->
-
-
-
-	</form>
-
-
-
-
-<!-- debut footer  -->
+	<!-- debut footer  -->
 	<link
 		href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		rel="stylesheet" id="bootstrap-css">

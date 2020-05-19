@@ -48,6 +48,7 @@ public class Annonce {
 		 this.description=description;
 		 this.nomImage=nomImage;
 		 this.compte=compte;
+		 
 	}
 	
 	// METHODES
@@ -65,11 +66,16 @@ public class Annonce {
 	 
 	}
 	
+	
 	@Override
 	public String toString() {
 		return "Annonce [id=" + id + ", titre=" + titre + ", prix=" + prix + ", categorie=" + categorie
-				+ ", description=" + description + ", nomImage=" + nomImage /* + ", compte=" + compte + "]" */;
+				+ ", description=" + description + ", nomImage=" + nomImage + ", compte=" + compte
+				+ "]";
 	}
+
+
+	
 
 	
 
@@ -131,6 +137,7 @@ public class Annonce {
 	public void setNomImage(String nomImage) {
 		this.nomImage = nomImage;
 	}
+
 	
 	
 	
