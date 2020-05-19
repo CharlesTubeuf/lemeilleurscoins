@@ -16,27 +16,19 @@ import org.hibernate.cfg.Configuration;
 public class Compte {
 
 @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column (name = "id")
 private int id;
 
-@Column (name = "pseudo")
 private String pseudo;
 
-@Column (name = "mail")
 private String mail; 
 
-@Column (name = "mdp")
 private String mdp;
 
-@Column (name = "numTel")
 private int numTel ;
 
-@Column (name = "ville")
 private String ville ;
 
-@Column (name = "codePostal")
 private int codePostal;
-
 
 @OneToMany (cascade = {CascadeType.ALL}, orphanRemoval = true)
 private List<Annonce> Annonces = new ArrayList<Annonce>() ;

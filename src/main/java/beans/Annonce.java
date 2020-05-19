@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -30,7 +31,8 @@ public class Annonce {
 	private String description;
 	private String nomImage; 
 	
-	@ManyToOne 
+	@ManyToOne
+	@JoinColumn (name ="compte_id")
 	private Compte compte;
 	
 	// constructeurs
@@ -39,7 +41,7 @@ public class Annonce {
 	public Annonce() {	
 	}
 
-	public Annonce (String titre,int prix , String categorie, String description,String nomImage  ,Compte compte ) {
+	public Annonce (String titre,int prix , String categorie, String description,String nomImage  ,Compte compte  ) {
 		 this.titre=titre;
 		 this.prix=prix;
 		 this.categorie=categorie; 
