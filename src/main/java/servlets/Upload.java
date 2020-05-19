@@ -73,6 +73,9 @@ public class Upload extends HttpServlet {
     	Annonce.saveAnnonce(annonce);
         
         
+    	//affichage de l'annonce dans le compte
+    	
+    	
         
         
         

@@ -16,6 +16,25 @@ public class Compte extends HttpServlet {
 		
 	
 		request.setAttribute("pseudo", pseudo);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 		this.getServletContext().getRequestDispatcher("/compte.jsp").forward(request,response);
 	}
