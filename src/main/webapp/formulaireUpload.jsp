@@ -167,7 +167,7 @@
 								<div>
 									<h4>  Contact</h4>
 									<p>
-										   <span class="header-font">M</span>y<span
+										   <span class="header-font"></span><span
 											class="header-font"></span>LeMeilleurCoin.com
 									</p>
 								</div>

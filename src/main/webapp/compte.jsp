@@ -145,7 +145,7 @@
             </div>
             <div class="col-sm-11 text-white">
                 <div><h4>  Contact</h4>
-                    <p>   <span class="header-font">M</span>y<span class="header-font"></span>LeMeilleurCoin.com</p>
+                    <p>   <span class="header-font"></span><span class="header-font"></span>LeMeilleurCoin.com</p>
                 </div>
             </div>
             </div>
