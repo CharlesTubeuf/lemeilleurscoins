@@ -92,12 +92,22 @@
 </servlet>
 
 
--<servlet-mapping>
+
+-<servlet>
+	<servlet-name>Localisation</servlet-name>
+	<display-name>Localisation</display-name>
+	<description></description>
+	<servlet-class>servlets.Localisation</servlet-class>
+</servlet><servlet-mapping>
 
 <servlet-name>Upload</servlet-name>
 
 <url-pattern>/Upload</url-pattern>
 
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>Localisation</servlet-name>
+	<url-pattern>/Localisation</url-pattern>
 </servlet-mapping>
 
 </web-app>
