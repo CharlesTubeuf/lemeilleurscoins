@@ -67,52 +67,35 @@
 		
 		<!--fin information sur l'utilisateur  -->
 
-	
-<h5 class="text-center p-3 mb-2 bg-primary text-white">Trouvez la
-		bonne affaire parmi les millions de petites annonces LeMeilleurCoin</h5>
-		
-		
-	
-		
-	
-		
-
-
-<!-- debut barre de recherche  -->
-
-
-	<form class="form-inline my-2 my-lg-0">
-
-		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			<a class="dropdown-item" href="#">Multimédias</a> <a
-				class="dropdown-item" href="#">Instruments de musique</a>
-		</div>
-
-		<input class="form-control mr-sm-2" type="search"
-			placeholder="Rechercher" aria-label="Search">
-		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Que
-			recherchez-vous?</button>
-		<input class="form-control mr-sm-2" type="search"
-			placeholder="Localisation" aria-label="Search">
-		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Saisissez
-			une localisation</button>
-		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-			role="button" data-toggle="dropdown" aria-haspopup="true"
-			aria-expanded="false"> Catégories </a>
-
-	</form>
-
-
-	<!--fin barre de recherche  -->
-
-
 
 	
 
 	<h5 class="text-center p-3 mb-2 bg-primary text-white">Vos annonces</h5>
-
 	
+<!-- mise en place d'un nombre de card égale au nombre d'annonce dans la liste d'annonce du compte. -->
 
+ <c:forEach items="${listAnnonces}" var="Annonce">
+ 
+ <div class="col-sm-3">
+ 
+	<div class="card" style="width: 18rem;">	
+  <img src="${Annonce.nomImage}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><c:out value="${Annonce.titre}"/></h5>
+    <p class="card-text">Description : <c:out value="${Annonce.description}"/></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Prix : <c:out value="${Annonce.prix}"/></li>    
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">supprimé l'annonce</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+</div>
+
+
+</c:forEach>
 
 
 
