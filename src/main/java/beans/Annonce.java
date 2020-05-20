@@ -12,10 +12,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.*;
 
+import org.hibernate.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 @Entity
 @Table (name = "Annonce")
@@ -66,6 +69,21 @@ public class Annonce {
 	 
 	}
 	
+	public static List<Annonce> getListAnnonceByCompteId (int compteId) {
+		Configuration config = new Configuration();
+		SessionFactory sessionFactory = config.configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+//		VA CHERCHER les annonces du
+		Query query = session.createQuery("FROM Annonce A WHERE A.compte.id =:cmpt");
+		query.setParameter("cmpt", compteId);
+		
+		List<Annonce> listAnnonces = query.list();
+		
+		session.getTransaction().commit();	      
+		session.close();
+		return listAnnonces;
+	}
 	
 	@Override
 	public String toString() {

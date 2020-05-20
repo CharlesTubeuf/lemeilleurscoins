@@ -1,10 +1,15 @@
 package servlets;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import beans.Annonce;
 
 public class Compte extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -12,27 +17,18 @@ public class Compte extends HttpServlet {
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String pseudo = request.getParameter("pseudo");
+		HttpSession sessionUtilisateur = request.getSession();
+		beans.Compte compte = (beans.Compte) sessionUtilisateur.getAttribute("compte");
 		
-	
-		request.setAttribute("pseudo", pseudo);
+		//                                ATTENTION : PAS OUBLIER DE REMETRE LE ID DU COMPTE ACTIF EN DESSOUS AU LIEU DE 3
+		List<Annonce> listAnnonces =	Annonce.getListAnnonceByCompteId(3);
 		
+		// envoye la liste des annonce à la jsp compte
+		request.setAttribute("listAnnonces", listAnnonces);
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+//		//envoye la taille de la liste d'annonce
+//		int nbAnnonces = listAnnonces.size();
+//		request.setAttribute("nbAnnonces",nbAnnonces);
 		
 		
 
