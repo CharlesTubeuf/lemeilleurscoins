@@ -22,6 +22,7 @@ public class Compte extends HttpServlet {
 		
 		//                                ATTENTION : PAS OUBLIER DE REMETRE LE ID DU COMPTE ACTIF EN DESSOUS AU LIEU DE 3
 		List<Annonce> listAnnonces =	Annonce.getListAnnonceByCompteId(compte.getId());
+		System.out.println("compte id :"+compte.getId());
 		
 		// envoye la liste des annonce à la jsp compte
 		request.setAttribute("listAnnonces", listAnnonces);

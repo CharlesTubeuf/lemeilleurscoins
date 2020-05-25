@@ -42,7 +42,7 @@
 								value="${compte.pseudo}" />
 					</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="./compte.jsp">Accéder à mon
+							<a class="dropdown-item" href="Compte">Accéder à mon
 								compte</a> <a class="dropdown-item" href="#">Mes annonces</a> <a
 								class="dropdown-item" href="./formulaireUpload.jsp">Déposer
 								une annonce</a>

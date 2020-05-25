@@ -53,8 +53,7 @@
 		<c:out value="${compte.pseudo}" />
 		! <br> Email:
 		<c:out value="${compte.mail}" />
-		<br> Numéro de télephone:
-		<c:out value="${compte.numTel}" />
+		<br> Numéro de téléphone: 0<c:out value="${compte.numTel}" />
 		<br> Ville:
 		<c:out value="${compte.ville}" />
 	</div>
