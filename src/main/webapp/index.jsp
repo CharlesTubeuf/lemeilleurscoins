@@ -83,10 +83,10 @@
 			placeholder="Rechercher" aria-label="Search">
 		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Que
 			recherchez-vous?</button>
-		<input class="form-control mr-sm-2" type="search"
+	<!-- 	<input class="form-control mr-sm-2" type="search"
 			placeholder="Localisation" aria-label="Search">
 		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Saisissez
-			une localisation</button>
+			une localisation</button> -->
 		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 			role="button" data-toggle="dropdown" aria-haspopup="true"
 			aria-expanded="false"> Catégories </a>
