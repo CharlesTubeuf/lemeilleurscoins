@@ -110,8 +110,9 @@
 							value="${Annonce.prix}" /></li>
 				</ul>
 				<div class="card-body">
-					<a href="#" class="card-link">supprimé l'annonce</a> <a href="#"
-						class="card-link">Another link</a>
+					<form action="SuprimeAnnonce" method="post">
+					<button type="submit"  class="card-link" value="${Annonce.id}" name="annonceId">Supprimé l'annonce</button>
+					</form>
 				</div>
 			</div>
 		</div>

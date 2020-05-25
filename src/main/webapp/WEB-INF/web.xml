@@ -90,6 +90,12 @@
 		<servlet-class>servlets.Test</servlet-class>
 
 	</servlet>
+	<servlet>
+		<servlet-name>SuprimeAnnonce</servlet-name>
+		<display-name>SuprimeAnnonce</display-name>
+		<description></description>
+		<servlet-class>servlets.SuprimeAnnonce</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 
@@ -113,6 +119,10 @@
 		<servlet-name>Test</servlet-name>
 		<url-pattern>/Test</url-pattern>
 
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SuprimeAnnonce</servlet-name>
+		<url-pattern>/SuprimeAnnonce</url-pattern>
 	</servlet-mapping>
 
 </web-app>
