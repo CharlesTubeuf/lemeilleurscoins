@@ -21,7 +21,7 @@ public class Compte extends HttpServlet {
 		beans.Compte compte = (beans.Compte) sessionUtilisateur.getAttribute("compte");
 		
 		//                                ATTENTION : PAS OUBLIER DE REMETRE LE ID DU COMPTE ACTIF EN DESSOUS AU LIEU DE 3
-		List<Annonce> listAnnonces =	Annonce.getListAnnonceByCompteId(3);
+		List<Annonce> listAnnonces =	Annonce.getListAnnonceByCompteId(compte.getId());
 		
 		// envoye la liste des annonce à la jsp compte
 		request.setAttribute("listAnnonces", listAnnonces);

@@ -26,17 +26,15 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link"
-					href="#"><div>
+				<li class="nav-item active"><a class="nav-link" href="#"><div>
 							Bienvenue
 							<c:out value="${sessionScope.pseudo}" />
-						</div>
-						<span class="sr-only">(current)</span></a></li>
+						</div> <span class="sr-only">(current)</span></a></li>
 				<li class="nav-item"><a class="nav-link"
 					href="./formulaireUpload.jsp"> Déposer une annonce</a></li>
 
 
-				
+
 			</ul>
 			<a class="navbar-brand" href="#"> <img src="img/payment.png"
 				alt="..." style="width: 5rem;">
@@ -45,44 +43,23 @@
 		</div>
 	</nav>
 	<!--fin navbar  -->
-	
-	
-		<!-- debut information sur l'utilisateur -->
-		
-		<div class=" bg-secondary text-white text-center">
-	
-							Bienvenue
-							<c:out value="${compte.pseudo}" />
-							!
-							<br>
-							Email:
-							<c:out value="${compte.mail}" />
-							<br>
-							Numéro de télephone: 
-							<c:out value="${compte.numTel}" />
-							<br>
-							Ville: 
-							<c:out value="${compte.ville}" />
-						</div>
-		
-		<!--fin information sur l'utilisateur  -->
 
 
+	<!-- debut information sur l'utilisateur -->
 
-		
-		
+	<div class=" bg-secondary text-white text-center">
 
-	
-	
-	
-	
-	
-	
-	
+		Bienvenue
+		<c:out value="${compte.pseudo}" />
+		! <br> Email:
+		<c:out value="${compte.mail}" />
+		<br> Numéro de télephone:
+		<c:out value="${compte.numTel}" />
+		<br> Ville:
+		<c:out value="${compte.ville}" />
+	</div>
 
-		
-	
-		
+	<!--fin information sur l'utilisateur  -->
 
 
 
@@ -90,40 +67,65 @@
 
 
 
-	
-
-	<h5 class="text-center p-3 mb-2 bg-primary text-white">Vos annonces</h5>
-	
-<!-- mise en place d'un nombre de card égale au nombre d'annonce dans la liste d'annonce du compte. -->
-
- <c:forEach items="${listAnnonces}" var="Annonce">
- 
- <div class="col-sm-3">
- 
-	<div class="card" style="width: 18rem;">	
-  <img src="${Annonce.nomImage}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><c:out value="${Annonce.titre}"/></h5>
-    <p class="card-text">Description : <c:out value="${Annonce.description}"/></p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Prix : <c:out value="${Annonce.prix}"/></li>    
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">supprimé l'annonce</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
-</div>
-</div>
 
 
-</c:forEach>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<h5 class="text-center p-3 mb-2 bg-primary text-white">Vos
+		annonces</h5>
+
+	<!-- mise en place d'un nombre de card égale au nombre d'annonce dans la liste d'annonce du compte. -->
+
+	<c:forEach items="${listAnnonces}" var="Annonce">
+
+		<div class="block" col-sm-3>
+
+			<div class="card" style="width: 18rem;">
+				<img src="${Annonce.nomImage}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">
+						<c:out value="${Annonce.titre}" />
+					</h5>
+					<p class="card-text">
+						Description :
+						<c:out value="${Annonce.description}" />
+					</p>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">Prix : <c:out
+							value="${Annonce.prix}" /></li>
+				</ul>
+				<div class="card-body">
+					<a href="#" class="card-link">supprimé l'annonce</a> <a href="#"
+						class="card-link">Another link</a>
+				</div>
+			</div>
+		</div>
+
+
+	</c:forEach>
 
 
 
 
 
 	<!-- debut footer  -->
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -179,6 +181,7 @@
     <!--/.footer-->
 
     <!--/.footer-bottom--> 
+
 	<!-- fin footer -->
 
 
