@@ -5,12 +5,6 @@
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
 	<servlet>
-		<servlet-name>Index</servlet-name>
-		<display-name>Index</display-name>
-		<description></description>
-		<servlet-class>servlets.Index</servlet-class>
-	</servlet>
-	<servlet>
 		<servlet-name>Compte</servlet-name>
 		<display-name>Compte</display-name>
 		<description></description>
@@ -23,21 +17,11 @@
 		<servlet-class>servlets.Connexion</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>ConstructeurAnnonce</servlet-name>
-		<display-name>ConstructeurAnnonce</display-name>
-		<description></description>
-		<servlet-class>servlets.ConstructeurAnnonce</servlet-class>
-	</servlet>
-	<servlet>
 		<servlet-name>DestroySession</servlet-name>
 		<display-name>DestroySession</display-name>
 		<description></description>
 		<servlet-class>servlets.DestroySession</servlet-class>
 	</servlet>
-	<servlet-mapping>
-		<servlet-name>Index</servlet-name>
-		<url-pattern>/Index</url-pattern>
-	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>Compte</servlet-name>
 		<url-pattern>/Compte</url-pattern>
@@ -45,10 +29,6 @@
 	<servlet-mapping>
 		<servlet-name>Connexion</servlet-name>
 		<url-pattern>/Connexion</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>ConstructeurAnnonce</servlet-name>
-		<url-pattern>/ConstructeurAnnonce</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>DestroySession</servlet-name>
@@ -102,19 +82,15 @@
 		<display-name>Localisation</display-name>
 		<description></description>
 		<servlet-class>servlets.Localisation</servlet-class>
-
+	</servlet>
+	<servlet>
 		<servlet-name>Test</servlet-name>
 		<display-name>Test</display-name>
 		<description></description>
 		<servlet-class>servlets.Test</servlet-class>
 
 	</servlet>
-	<servlet>
-		<servlet-name>DestroySession</servlet-name>
-		<display-name>DestroySession</display-name>
-		<description></description>
-		<servlet-class>servlets.DestroySession</servlet-class>
-	</servlet>
+
 	<servlet-mapping>
 
 
@@ -131,12 +107,12 @@
 		<servlet-name>Localisation</servlet-name>
 		<url-pattern>/Localisation</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet-mapping>
 
-	<servlet-name>Test</servlet-name>
-	<url-pattern>/Test</url-pattern>
+		<servlet-name>Test</servlet-name>
+		<url-pattern>/Test</url-pattern>
 
-</servlet-mapping>
+	</servlet-mapping>
 
 </web-app>
