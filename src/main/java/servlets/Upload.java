@@ -57,15 +57,20 @@ public class Upload extends HttpServlet {
         int prix = Integer.parseInt(request.getParameter("prix"));
 		String categorie = request.getParameter("categorie");
 		String description = request.getParameter("description");		
-		// nom image est le lien jusqu'ï¿½ l'image sur l'ordinateur. 
+		// nom image est le lien jusqu'a l'image sur l'ordinateur. 
 		String nomImage = chemin+form.leNomImage;
 		
-		
-		// rï¿½cupï¿½ration du compte actif
+		//affiche une image par defaut si pas d'image pour l'annonce
+		if ( form.leNomImage == null)
+			{
+			nomImage = chemin + "pasdimagemonpote.jpg";
+			};
+				
+		// récupération du compte actif
 		HttpSession sessionUtilisateur = request.getSession();
 		beans.Compte compte = (beans.Compte) sessionUtilisateur.getAttribute("compte");
 		
-		// Crï¿½ation du Bean annonce. 
+		// Création du Bean annonce. 
 		Annonce annonce = new Annonce(titre, prix, categorie, description, nomImage, compte);
 		
 
