@@ -18,6 +18,7 @@
 <body>
 
 	<!--debut navbar  -->
+
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="./index.jsp">LeMeilleurCoin</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -29,10 +30,33 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link"
-					href="./connexion.jsp">Se connecter<span class="sr-only">(current)</span></a>
-				</li>
-			
+
+
+				<c:if test="${empty sessionScope.compte}">
+					<li class="nav-item active"><a class="nav-link  "
+						href="./connexion.jsp">Se connecter<span class="sr-only">(current)</span></a>
+					</li>
+				</c:if>
+
+				<c:if test="${!empty sessionScope.compte}">
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						role="button" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false"> Bienvenue <c:out
+								value="${compte.pseudo}" />
+					</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="Compte">Accéder à mon
+								compte</a> <a class="dropdown-item" href="#">Mes annonces</a> <a
+								class="dropdown-item" href="./formulaireUpload.jsp">Déposer
+								une annonce</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="DestroySession">Se déconnecter</a>
+						</div></li>
+				</c:if>
+
+
+
 			</ul>
 			<a class="navbar-brand" href="#"> <img src="img/payment.png"
 				alt="..." style="width: 5rem;">
@@ -40,6 +64,7 @@
 
 		</div>
 	</nav>
+
 	<!--fin navbar  -->
 
 
