@@ -24,11 +24,11 @@ public class Test extends HttpServlet {
 		
 		
 		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.getWriter().append("Served atLUNDI: ").append(request.getContextPath());
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		System.out.println("NON MAIS LOL KOI");
 		doGet(request, response);
 	}
 
