@@ -72,17 +72,12 @@
 	<!-- debut barre de recherche  -->
 
 
-	<form class="form-inline my-2 my-lg-0">
+	<form class="form-inline my-2 my-lg-0" action="Rechercher" method="get">
 
-		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			<a class="dropdown-item" href="#">Multimédias</a> <a
-				class="dropdown-item" href="#">Instruments de musique</a>
-		</div>
-
+		
 		<input class="form-control mr-sm-2" type="search"
-			placeholder="Rechercher" aria-label="Search">
-		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Que
-			recherchez-vous?</button>
+			placeholder="Que recherchez-vous?" aria-label="Search">
+		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
 	<!-- 	<input class="form-control mr-sm-2" type="search"
 			placeholder="Localisation" aria-label="Search">
 		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Saisissez
@@ -90,6 +85,11 @@
 		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 			role="button" data-toggle="dropdown" aria-haspopup="true"
 			aria-expanded="false"> Catégories </a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			<a class="dropdown-item" href="#">Multimédias</a> <a
+				class="dropdown-item" href="#">Instruments de musique</a>
+		</div>
+			
 
 	</form>
 

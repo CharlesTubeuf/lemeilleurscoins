@@ -39,90 +39,77 @@
 
 
 
-	-
+	
 	<servlet>
-
 		<servlet-name>Upload</servlet-name>
-
 		<display-name>Upload</display-name>
-
 		<description />
-
-		<servlet-class>servlets.Upload</servlet-class>
-
-
-		-
+		<servlet-class>servlets.Upload</servlet-class>		
 		<multipart-config>
-
 			<max-file-size>10485760</max-file-size>
-
 			<!-- 10 Mo -->
-
-
 			<max-request-size>52428800</max-request-size>
-
 			<!-- 5 x 10 Mo -->
-
-
 			<file-size-threshold>1048576</file-size-threshold>
-
 			<!-- 1 Mo -->
-
-
 		</multipart-config>
-
 	</servlet>
 
 
 
-	-
+	
 	<servlet>
-
 		<servlet-name>Localisation</servlet-name>
 		<display-name>Localisation</display-name>
 		<description></description>
 		<servlet-class>servlets.Localisation</servlet-class>
 	</servlet>
+
 	<servlet>
 		<servlet-name>Test</servlet-name>
 		<display-name>Test</display-name>
 		<description></description>
 		<servlet-class>servlets.Test</servlet-class>
-
 	</servlet>
+
 	<servlet>
 		<servlet-name>SuprimeAnnonce</servlet-name>
 		<display-name>SuprimeAnnonce</display-name>
 		<description></description>
 		<servlet-class>servlets.SuprimeAnnonce</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>Rechercher</servlet-name>
+		<display-name>Rechercher</display-name>
+		<description></description>
+		<servlet-class>servlets.Rechercher</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
-
-
 		<servlet-name>Upload</servlet-name>
-
 		<url-pattern>/Upload</url-pattern>
 	</servlet-mapping>
 
 
 	<servlet-mapping>
-
-
-
 		<servlet-name>Localisation</servlet-name>
 		<url-pattern>/Localisation</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
-
 		<servlet-name>Test</servlet-name>
 		<url-pattern>/Test</url-pattern>
-
 	</servlet-mapping>
+
 	<servlet-mapping>
 		<servlet-name>SuprimeAnnonce</servlet-name>
 		<url-pattern>/SuprimeAnnonce</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Rechercher</servlet-name>
+		<url-pattern>/Rechercher</url-pattern>
 	</servlet-mapping>
 
 </web-app>
