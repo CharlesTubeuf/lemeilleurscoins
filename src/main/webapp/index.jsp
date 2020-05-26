@@ -121,11 +121,10 @@
 							value="${Annonce.prix}" /></li>
 				</ul>
 				<div class="card-body">
-					<form action="###########################################"
+					<form action="AnnonceSelectionner"
 						method="post">
 						<button type="submit" class="card-link" value="${Annonce.id}"
-							name="annonceId">Ne pas utiliser (mettre l'annonce sur
-							une page après)</button>
+							name="annonceId">Plus de détails</button>
 					</form>
 				</div>
 			</div>

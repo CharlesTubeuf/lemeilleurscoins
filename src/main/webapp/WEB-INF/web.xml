@@ -85,6 +85,12 @@
 		<description></description>
 		<servlet-class>servlets.Rechercher</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>AnnonceSelectionner</servlet-name>
+		<display-name>AnnonceSelectionner</display-name>
+		<description></description>
+		<servlet-class>servlets.AnnonceSelectionner</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>Upload</servlet-name>
@@ -110,6 +116,10 @@
 	<servlet-mapping>
 		<servlet-name>Rechercher</servlet-name>
 		<url-pattern>/Rechercher</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AnnonceSelectionner</servlet-name>
+		<url-pattern>/AnnonceSelectionner</url-pattern>
 	</servlet-mapping>
 
 </web-app>
