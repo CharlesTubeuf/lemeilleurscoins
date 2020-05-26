@@ -67,16 +67,20 @@
 
 	<!-- debut information sur l'utilisateur -->
 
-	<div class=" bg-secondary text-white text-center">
 
-		Bienvenue
-		<c:out value="${compte.pseudo}" />
-		! <br> Email:
-		<c:out value="${compte.mail}" />
-		<br> Numéro de téléphone: 0<c:out value="${compte.numTel}" />
-		<br> Ville:
-		<c:out value="${compte.ville}" />
-	</div>
+<div class="card text-center">
+  <div class="card-header">
+   Pseudo : <c:out value="${compte.pseudo}" />
+  </div>
+  <div class="card-body">
+    Mail : <h5 class="card-title"><c:out value="${compte.mail}" /></h5>
+    <p class="card-text">Numéro de téléphone : 0<c:out value="${compte.numTel}" /></p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+   Adresse : <c:out value="${compte.ville}" />
+  </div>
+</div>
 
 	<!--fin information sur l'utilisateur  -->
 
@@ -84,29 +88,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<h5 class="text-center p-3 mb-2 bg-primary text-white">Vos
 		annonces</h5>
+
+
+
 
 	<!-- mise en place d'un nombre de card égale au nombre d'annonce dans la liste d'annonce du compte. -->
 
