@@ -17,12 +17,16 @@
     <script>
 // Initialize and add the map
 function initMap() {
-  // The location of Uluru
+	
+  // The location of la ville corespondant à l'annonce
   Configuration config = new Configuration();
 			SessionFactory sessionFactory = config.configure().buildSessionFactory();
 			Session session = sessionFactory.openSession();
 			session.beginTransaction();
-			<c:out value = "${annonceselect.compte.ville}"/>
+	
+			
+	var loca = 	"${compte.ville}"	
+			
   var uluru = {lat: -25.344, lng: 131.036};
   // The map, centered at Uluru
   var map = new google.maps.Map(
