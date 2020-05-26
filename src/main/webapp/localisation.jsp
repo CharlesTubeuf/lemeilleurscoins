@@ -19,20 +19,21 @@
 function initMap() {
 	
   // The location of la ville corespondant à l'annonce
-  Configuration config = new Configuration();
+  
+            Configuration config = new Configuration();
 			SessionFactory sessionFactory = config.configure().buildSessionFactory();
 			Session session = sessionFactory.openSession();
 			session.beginTransaction();
-	
+			beans.Annonce annonceSelect = request.getParameter("annonceSelect");
 			
-	var loca = 	"${compte.ville}"	
+	var loca = <c:out value="${annonceSelect.compte.ville}"/>
 			
-  var uluru = {lat: -25.344, lng: 131.036};
+  var paris = {lat: 48.866666, lng: 2.33333};
   // The map, centered at Uluru
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
+      document.getElementById('map'), {zoom: 10, center: paris});
   // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
+  var marker = new google.maps.Marker({position: paris, map: map});
 }
     </script>
     <!--Load the API from the specified URL
