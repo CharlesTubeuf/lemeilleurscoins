@@ -49,16 +49,8 @@ public class Rechercher extends HttpServlet {
 			request.setAttribute("AnnoncesRechercher", AnnoncesRechercher);
 		
 		
-		this.getServletContext().getRequestDispatcher("/").forward(request, response);
 		
-		
-		
-		
-		
-		
-		
-		
-			this.getServletContext().getRequestDispatcher("/index.jsp").forward(request,response);
+			this.getServletContext().getRequestDispatcher("./Index").forward(request,response);
 		
 	}
 

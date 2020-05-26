@@ -91,6 +91,12 @@
 		<description></description>
 		<servlet-class>servlets.AnnonceSelectionner</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>Index</servlet-name>
+		<display-name>Index</display-name>
+		<description></description>
+		<servlet-class>servlets.Index</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>Upload</servlet-name>
@@ -120,6 +126,10 @@
 	<servlet-mapping>
 		<servlet-name>AnnonceSelectionner</servlet-name>
 		<url-pattern>/AnnonceSelectionner</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Index</servlet-name>
+		<url-pattern>/Index</url-pattern>
 	</servlet-mapping>
 
 </web-app>

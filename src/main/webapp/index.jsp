@@ -16,7 +16,7 @@
 	<!--debut navbar  -->
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="./index.jsp">LeMeilleurCoin</a>
+		<a class="navbar-brand" href="/Index">LeMeilleurCoin</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -657,28 +657,30 @@
 			<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
 		</ol>
 		<div class="carousel-inner">
+		<!-- BOUCLES DES 3 DERNIERES ANNONCES RECU EN SESSION -->		
 			<div class="carousel-item active">
-				<img src="img/dj.jpg" class="d-block w-100" alt="...">
+				<img src="${AnnoncesCarousel[0].nomImage}" class="d-block w-100" alt="...">
 				<div class="carousel-caption d-none d-md-block">
-					<h5>First slide label</h5>
-					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+					<h5><c:out value="${AnnoncesCarousel[0].titre}" /></h5>
+					<p><c:out value="${AnnoncesCarousel[0].prix}" />€</p>
+				</div>
+			</div>
+		
+		  <div class="carousel-item">
+				<img src="${AnnoncesCarousel[1].nomImage}" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5><c:out value="${AnnoncesCarousel[1].titre}" /></h5>
+					<p><c:out value="${AnnoncesCarousel[1].prix}" />€</p>
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="img/collection.jpg" class="d-block w-100" alt="...">
+				<img src="${AnnoncesCarousel[2].nomImage}" class="d-block w-100" alt="...">
 				<div class="carousel-caption d-none d-md-block">
-					<h5>Second slide label</h5>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<h5><c:out value="${AnnoncesCarousel[2].titre}" /></h5>
+					<p><c:out value="${AnnoncesCarousel[2].prix}" />€</p>
 				</div>
-			</div>
-			<div class="carousel-item">
-				<img src="img/computer.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
-					<h5>Third slide label</h5>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl
-						consectetur.</p>
-				</div>
-			</div>
+			</div>  
+			
 		</div>
 		<a class="carousel-control-prev" href="#carouselExampleCaptions"
 			role="button" data-slide="prev"> <span
