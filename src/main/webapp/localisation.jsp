@@ -26,7 +26,7 @@ function initMap() {
   
             
 			
-	var loca = <c:out value="${annonceSelect.compte.ville}"/>
+	
 			
   var paris = {lat: 48.866666, lng: 2.33333};
   // The map, centered at Uluru

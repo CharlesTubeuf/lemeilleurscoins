@@ -25,6 +25,7 @@ import org.hibernate.query.Query;
 
 public class VilleFrance {
 
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int ville_id;
 	private String ville_nom;
 	private String ville_code_postal;

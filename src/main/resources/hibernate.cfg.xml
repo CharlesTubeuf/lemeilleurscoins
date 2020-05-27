@@ -16,6 +16,7 @@
 		<!-- Seront indiqués ici les fichiers de mapping -->
 		<mapping class="beans.Compte"/>
 		<mapping class="beans.Annonce"/>
+		<mapping class="beans.VilleFrance"/>
 		
 	</session-factory>
 </hibernate-configuration>

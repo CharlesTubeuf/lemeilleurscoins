@@ -23,8 +23,9 @@ public class AnnonceSelectionner extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// 	RECUP L'ID DE LANNONCE SUR LAQUELLE ON CLIQUE
-		int annonceId = Integer.parseInt(request.getParameter("annonceId"));
-		
+		/////////////attentiion a changer///////////////////
+//		int annonceId = Integer.parseInt(request.getParameter("annonceId"));
+		int annonceId = 5;
 		// RECUP L'ANNONCE DE CORRESPONDANT � L'ID
 		Configuration config = new Configuration();
 		SessionFactory sessionFactory = config.configure().buildSessionFactory();
