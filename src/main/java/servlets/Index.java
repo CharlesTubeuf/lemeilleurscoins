@@ -37,10 +37,6 @@ public class Index extends HttpServlet {
 		session.getTransaction().commit();	      
 		session.close();
 		
-		for(Annonce a : AnnoncesCarousel)
-			System.out.println(a);
-		
-		
 		// ENVOYE DE LA LISTE DE 3 ANNONCES A LA JSP
 		HttpSession sessionCarousel = request.getSession();
 		request.setAttribute("AnnoncesCarousel", AnnoncesCarousel);

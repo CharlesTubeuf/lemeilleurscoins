@@ -1,3 +1,7 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,13 +22,9 @@
 // Initialize and add the map
 function initMap() {
 	
-  // The location of la ville corespondant à l'annonce
+  // The location of la ville corespondant Ã  l'annonce
   
-            Configuration config = new Configuration();
-			SessionFactory sessionFactory = config.configure().buildSessionFactory();
-			Session session = sessionFactory.openSession();
-			session.beginTransaction();
-			beans.Annonce annonceSelect = request.getParameter("annonceSelect");
+            
 			
 	var loca = <c:out value="${annonceSelect.compte.ville}"/>
 			

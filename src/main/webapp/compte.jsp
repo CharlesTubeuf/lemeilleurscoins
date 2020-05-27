@@ -113,7 +113,7 @@
 				</div>
 				<ul class="list-group list-group-flush">
 					<li class="list-group-item">Prix : <c:out
-							value="${Annonce.prix}" /></li>
+							value="${Annonce.prix}" />€</li>
 				</ul>
 				<div class="card-body">
 					<form action="SuprimeAnnonce" method="post">

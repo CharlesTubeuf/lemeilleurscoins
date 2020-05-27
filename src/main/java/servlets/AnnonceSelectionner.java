@@ -15,6 +15,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import beans.Annonce;
+import beans.VilleFrance;
 
 public class AnnonceSelectionner extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -48,13 +49,18 @@ public class AnnonceSelectionner extends HttpServlet {
 
         Query query = session.createQuery("FROM VilleFrance V WHERE V.ville_code_postal=:cmpt");
         query.setParameter("cmpt", codepostal);
-
-        List<Annonce> listAnnonces = query.list();
+        
+        beans.VilleFrance laVille = (VilleFrance) query ; 
+        System.out.println(laVille);
 
         session.getTransaction().commit();
         session.close();
 		
-		
+        // envoie de la ville en session pour recup longitude et ** pour API;
+        HttpSession sessionLaVille = request.getSession();
+		request.setAttribute("laVille", laVille);
+        
+        
 		this.getServletContext().getRequestDispatcher("/annonceSelectionner.jsp").forward(request,response);
 	}
 
