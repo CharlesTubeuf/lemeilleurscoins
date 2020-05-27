@@ -15,7 +15,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import beans.Annonce;
-import beans.VilleFrance;
 import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverManager;
@@ -29,14 +28,17 @@ public class AnnonceSelectionner extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// 	RECUP L'ID DE LANNONCE SUR LAQUELLE ON CLIQUE
-//		int annonceId = Integer.parseInt(request.getParameter("annonceId"));
-		int annonceId = 26;
+
+		/////////////attentiion a changer///////////////////
+		int annonceId = Integer.parseInt(request.getParameter("annonceId"));
+	
+
 		// RECUP L'ANNONCE DE CORRESPONDANT � L'ID
 		Configuration config = new Configuration();
 		SessionFactory sessionFactory = config.configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		beans.Annonce annonceSelect = session.get(Annonce.class,annonceId);
-System.out.println(annonceSelect);
+
 		//  ENVOIE L'ANNONCE VOULU PAR SESSION POUR LA RECUP EN JSP
 		HttpSession sessionAnnonceSelect = request.getSession();
 		request.setAttribute("annonceSelect", annonceSelect);
@@ -47,7 +49,7 @@ System.out.println(annonceSelect);
 	
 		// Recuperer la ville de l'annonce
 		int codepostal = annonceSelect.getCompte().getCodePostal();
-System.out.println("le code postal : "+codepostal);
+
 		
 		// recuperation de la ville dans la base de donnée de la table villes_france_free
 		try {
@@ -67,22 +69,21 @@ System.out.println("le code postal : "+codepostal);
             String nomConnexion = "root"; // dpend du contexte
             String motDePasse = "pass"; // dpend du contexte
             // Connexion
-System.out.println(nomConnexion);
+
             Connection connexion = DriverManager.getConnection(conString, nomConnexion, motDePasse);
 
             Statement statement = connexion.createStatement();
-System.out.println("connexion faite");
+
             String req = "SELECT ville_latitude_deg, ville_longitude_deg FROM villes_france_free WHERE ville_code_postal LIKE '%"+codepostal+"%';";
-System.out.println("string req");
+
             ResultSet rs = statement.executeQuery(req);
-System.out.println("resultSet");
+
             while (rs.next()) {
     			String latitud = rs.getString("ville_latitude_deg");
     			String longitud = rs.getString("ville_longitude_deg");
     			float latitude = Float.parseFloat(latitud);
     			float longitude = Float.parseFloat(longitud);
-System.out.println("latitude est : "+latitude);
-System.out.println("longitude est : "+longitude);
+
     			HttpSession sessionGeoloc = request.getSession();
     			request.setAttribute("latitude", latitude);   			
     			request.setAttribute("longitude", longitude);
