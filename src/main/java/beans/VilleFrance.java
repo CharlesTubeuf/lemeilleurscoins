@@ -2,33 +2,29 @@ package beans;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.*;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
+
 
 @Entity
-@Table(name = "villes_france_free")
+@Table(name = "villes_france_free_test")
 
 public class VilleFrance {
-
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column (name = "ville_id")
 	private int ville_id;
+	@Column (name = "ville_nom")
 	private String ville_nom;
+	@Column (name = "ville_code_postal")
 	private String ville_code_postal;
+	@Column (name = "ville_longitude_deg")
+	@NotNull
 	private float ville_longitude_deg;
+	@Column (name = "ville_latitude_deg")
+	@NotNull
 	private float ville_latitude_deg;
 	
 	

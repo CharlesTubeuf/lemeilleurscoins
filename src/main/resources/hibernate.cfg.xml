@@ -11,11 +11,12 @@
 		<property name="hibernate.connection.url">jdbc:mysql://localhost/compte?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">pass</property>
-		<!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+		<!-- <property name="hibernate.hbm2ddl.auto">update</property> --> 
 		
 		<!-- Seront indiqués ici les fichiers de mapping -->
 		<mapping class="beans.Compte"/>
 		<mapping class="beans.Annonce"/>
+		<mapping class="beans.VilleFrance"/>
 		
 	</session-factory>
 </hibernate-configuration>

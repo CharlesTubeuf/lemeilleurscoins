@@ -11,6 +11,15 @@
 	crossorigin="anonymous">
 <meta charset="UTF-8">
 <title>Annonce</title>
+<!-- REGLAGES DE LA MAP LOCALISATION -->
+<style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 200px;  /* The height is 400 pixels */
+        width: 200px;  /* The width is the width of the web page */
+        background-color: grey;
+       }
+    </style>
 </head>
 
 <body>
@@ -110,7 +119,41 @@
 	</div>
 
 	<!-- fin Affichage de l'annonce -->
+	
+	
+<!-- DEBUT AFFICHAGE DE LA MAP   -->
 
+ <h3>Localisation de l'annonce</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+	
+  // The location of la ville corespondant à l'annonce
+  
+            
+	
+	
+  var ville = {lat: <c:out value="${latitude}"/>, lng: <c:out value="${longitude}"/>};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 10, center: ville});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: ville, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBlKcqseEtnMXU1lEnbs_zeIm-kxXPoPE&callback=initMap">
+    </script>
+
+
+<!-- FIN AFFICHAGE DE LA MAP   -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
 		crossorigin="anonymous"></script>

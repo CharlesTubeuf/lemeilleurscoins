@@ -50,7 +50,7 @@ public class Rechercher extends HttpServlet {
 		
 		
 		
-			this.getServletContext().getRequestDispatcher("./Index").forward(request,response);
+			this.getServletContext().getRequestDispatcher("/Index").forward(request,response);
 		
 	}
 
