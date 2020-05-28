@@ -14,7 +14,7 @@ public class DestroySession extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession sessionUtilisateur = request.getSession();
 		sessionUtilisateur.invalidate();
-		this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/Index").forward(request, response);
 	}
 
 	

@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="/ProjetFin/src/main/webapp/style.css" /> 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -16,7 +17,7 @@
 	<!--debut navbar  -->
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="/Index">LeMeilleurCoin</a>
+		<a class="navbar-brand" href="Index">LeMeilleurCoin</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -63,16 +64,19 @@
 
 	<!--fin navbar  -->
 
-	<h5 class="text-center p-3 mb-2 bg-primary text-white">Trouvez la
+	<h5 class="text-center p-3 mb-0 bg-primary text-white">Trouvez la
 		bonne affaire parmi les millions de petites annonces LeMeilleurCoin</h5>
 
 
+<!-- couleur du background -->
+ <div class="p-3 mb-2 bg-dark text-white"> 
 
+<div class="container">
 
 	<!-- debut barre de recherche  -->
 
 
-	<form class="form-inline my-2 my-lg-0" action="Rechercher" method="get">
+	<form class="form-inline my-2 my-lg-0 container-fluid p-3 mb-2" action="Rechercher" method="get">
 
 
 		<input class="form-control mr-sm-2" type="search"
@@ -144,7 +148,7 @@
 
 	<!-- debut du carousel -->
 
-	<div id="carouselExampleCaptions" class="carousel slide"
+	<div id="carouselExampleCaptions" class="carousel slide border"
 		data-ride="carousel">
 		<ol class="carousel-indicators">
 			<li data-target="#carouselExampleCaptions" data-slide-to="0"
@@ -155,7 +159,7 @@
 		<div class="carousel-inner">
 		<!-- BOUCLES DES 3 DERNIERES ANNONCES RECU EN SESSION -->		
 			<div class="carousel-item active">
-				<img src="${AnnoncesCarousel[0].nomImage}" class="d-block w-100" alt="...">
+				<img src="${AnnoncesCarousel[0].nomImage}" heigth="300" class="d-block w-100 " alt="...">
 				<div class="carousel-caption d-none d-md-block">
 					<h5><c:out value="${AnnoncesCarousel[0].titre}" /></h5>
 					<p><c:out value="${AnnoncesCarousel[0].prix}" />€</p>
@@ -163,14 +167,14 @@
 			</div>
 		
 		  <div class="carousel-item">
-				<img src="${AnnoncesCarousel[1].nomImage}" class="d-block w-100" alt="...">
+				<img src="${AnnoncesCarousel[1].nomImage}" heigth="300" class="d-block w-100 " alt="...">
 				<div class="carousel-caption d-none d-md-block">
 					<h5><c:out value="${AnnoncesCarousel[1].titre}" /></h5>
 					<p><c:out value="${AnnoncesCarousel[1].prix}" />€</p>
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="${AnnoncesCarousel[2].nomImage}" class="d-block w-100" alt="...">
+				<img src="${AnnoncesCarousel[2].nomImage}" heigth="300" class="d-block w-100 " alt="...">
 				<div class="carousel-caption d-none d-md-block">
 					<h5><c:out value="${AnnoncesCarousel[2].titre}" /></h5>
 					<p><c:out value="${AnnoncesCarousel[2].prix}" />€</p>
@@ -188,6 +192,7 @@
 			class="sr-only">Next</span>
 		</a>
 	</div>
+	
 	<!-- fin du carousel -->
 
 	
@@ -195,7 +200,7 @@
 <!--debut de la carte  -->
 
 
-	<div class="_2B0td">
+	<div class="_2B0td container-fluid p-3 mb-2">
 		<section data-qa-id="FranceRegionsSelector" class="_1ifAE">
 			<div>
 				<div data-qa-id="FranceRegionsMap" class="_2Nh90">
@@ -648,77 +653,25 @@
 							stroke-miterlimit="10"
 							d=" M299.9,407.9c3.3-3.1,5.5-1.6,7.3-0.5c2.1,1.2,4.2,2.6,6.2,3.6 c1.3,0.7,5.7,0.4,9.5,0.5c2.9,0,5.1,0.3,5.8,0.5c1.3-1.7,3.7-4.7,3.7-7.9 c0-2.5-0.4-10.4,4.8-15.2c3.9-3.6,13.7-5.1,13.9-8.2c0.3-4.6-7.3-16.1-6.5-24.4 c0.6-6.5,10.7-2.2,7.8-15.3c-0.5-2.3,0.8-7.2-1.1-10.8c-2.1-3.9-9.3-5.1-12.5-9 c-0.1-0.1-0.4-0.3-1.1-0.9c-0.8-0.7-2.1-1.7-3.9-2.5c-2.2-1-5.2-1.6-8.5-2.1 c-1.1-0.2-2.4-0.4-3.7-0.3c-0.8,0-1.6,0-2.3,0.2c-2.6-0.1-6,4.7-8.7,4.6 c-2.3-0.1-4.5-0.2-6.7-0.3c-1.6-0.1-3.2,0.2-4.7,0.7c-1.2,0.4-2.4,0.9-3.5,0.8 c-3.4-0.6-6.7-1.8-8.3-2.3c0,0,0,0,0,0c1.2-3-3.7-8.8-11.3-13.7 c-2.4-1.5-1.2-4.5-1.5-7.7c-0.4-4-2.1-8.3-3.6-11.8c-1.6-3.7-13-2.2-18.9-5.2 c-4.9-2.5-7.8-12.4-15.1-13.8c-2.4-0.5-4.9,5.2-7,4.9c-6.1-0.9-9.9-4.4-15.4-4.3 c-2.6,0.1-3.3,4.2-6.8,5c-6.7,1.6-12.5-0.1-12.2,6.1c0.2,3.9,5.9,11.6,9,18.8 c4.3,10,6,19.8,2.8,22.5c-1.7,1.5-5.6-0.3-9.8-2.6c-1.6-0.9-4.1,4.8-5.7,3.9 c-3.6-2.1-0.8-6.3-4.6-7c-4.2-0.8-4.2,4.9-6.4,7c-0.4,0.4-3.8,9.1,2.8,16.1 c2.8,3-1.5,11.3-4.6,15.1c-1.3,1.6-2.3,4.3-1.5,7.7c0.3,1.5,1.3,3.6,2.9,3.8 c2.4,0.4,4.4,1.2,5.7,1.8c6.5,2.9,12.6,18.2,13.1,19.8c0,0,0,0-0.1,0 c1.7,3.6,4,13.7,5.2,19.4c-1.5,1.1-4.8-3.2-10.2-17.8c-1.5-4-7.5-15.8-16.9-14 c2.3,3.6,1.8,15.1,1.7,24.2c0,3.4-0.4,10.2-2,14.2c-2,3-2.7,3.5-5,11.4 c3.8-1.3,8.1-1.1,9.5,3.3c0.6,1.8,0.5,3.8-0.6,4.9c-0.5,0.5-6,1.6-7.9,4.2 c-0.7,1-2,3.8-2.1,5.3c-0.4,3.8-0.5,5.1-1.7,11.5c-0.6,3.6-1.5,8.3-2.4,13.2 c-0.6,3.3-1.4,7.2-1.8,9.5c-0.8,4.2-1.9,11-3.5,15c-0.8,1.9-1.8,3.1-2.8,5.1 c-1.1,2.2-1,3.3-1.3,5.3c-0.2,1.8-0.8,4-2.5,5.7c-3.3,3.2-8.3,6.3-10.3,6.8 c1,2.3,3.8,5.5,7.6,5.9c1,0.1,3.3-0.1,4.9,0.9c1.3,0.8,2.3,2.9,1.5,7.8 c-0.1,0.7-0.9,4.7,0.4,5c1,0.2,4-2.2,5.2-3.9c3.2,3.6,9,6.8,15,9.7 c0.8,0.4,7.6,2.7,13.3,2.9c1.4,0.1,3.6,1.1,4.2,3c0.5,1.5,1.7,4.6,3.3,5 c2.3,0.7,4.9,1.1,6.9,1c1.5-0.1,2.4-0.3,3.9-0.8c-0.6-4.6,2.2-14.1,6-16.4 c5-3.1,11.5-15.6,10.2-21.6c-1.2-5.6-5.7-9.4-9.6-11.8c0.3-2.9-3.7-16-0.5-23.9 c1.5-3.6,11.5,3.1,13.7,0.9c1.7-1.7,5.6-3.7,12.1-4.4c1.5-0.2,1.8-2.1,3.2-2.7 c4.6-1.9,22.4-2.7,26-7.1c2-2.5-1.5-9.6-1.1-12.5c0.4-2.9,5.5-4.2,5.6-6.3 c0-0.9-1.1-4.8,0.5-8.6c0.8-2,5.9-1.4,7-3.8c1-2,6-7.4,10.2-13.5 c2.2-3.1,3.9-6.8,5.9-9"></path></g></svg>
 				</div>
-				<div class="_3q0nF">
-					<div class="_1Gifm">
-						<div class="_2BDI7">
-							<span class="kcRM9 _3U56w _4VqoG _3Wx6b"><svg
-									data-name="Calque 1" viewBox="0 0 24 24" width="1em"
-									height="1em">
-										<path
-										d="M23.37 5.62a2.15 2.15 0 00-3 0L12 13.87 3.68 5.62a2.2 2.2 0 00-3.05 0 2.1 2.1 0 000 3l9.86 9.76a2.14 2.14 0 003 0l9.86-9.76a2.1 2.1 0 00.02-3z"></path></svg></span>
-						</div>
-
-
-						<!-- barre de recherche de localisation -->
-
-
-						<div class="_2NL49">
-							<select><option value="">Choisissez une région</option>
-								<option value="1">Alsace</option>
-								<option value="2">Aquitaine</option>
-								<option value="3">Auvergne</option>
-								<option value="4">Basse-Normandie</option>
-								<option value="5">Bourgogne</option>
-								<option value="6">Bretagne</option>
-								<option value="7">Centre</option>
-								<option value="8">Champagne-Ardenne</option>
-								<option value="9">Corse</option>
-								<option value="10">Franche-Comté</option>
-								<option value="11">Haute-Normandie</option>
-								<option value="12">Ile-de-France</option>
-								<option value="13">Languedoc-Roussillon</option>
-								<option value="14">Limousin</option>
-								<option value="15">Lorraine</option>
-								<option value="16">Midi-Pyrénées</option>
-								<option value="17">Nord-Pas-de-Calais</option>
-								<option value="18">Pays de la Loire</option>
-								<option value="19">Picardie</option>
-								<option value="20">Poitou-Charentes</option>
-								<option value="21">Provence-Alpes-Côte d'Azur</option>
-								<option value="22">Rhône-Alpes</option>
-								<option value="23">Guadeloupe</option>
-								<option value="24">Martinique</option>
-								<option value="25">Guyane</option>
-								<option value="26">Réunion</option></select>
-						</div>
-					</div>
-				</div>
+				
 			</div>
 		</section>
 	</div>
-	<!--fin de la barre de recherche de localisation   -->
+	<!--fin de la carte de france   -->
 
 
-
-
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+<div class="border-top">
 	<!-- debut footer  -->
-	<link
-		href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-		rel="stylesheet" id="bootstrap-css">
-	<script
-		src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-	<!------ Include the above in your HEAD tag ---------->
-
-	<link
-		href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-		rel="stylesheet">
-
-	<link
-		href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
-		rel="stylesheet">
+	
 	<footer>
-		<div class="container-fluid p-3 mb-2 bg-dark text-white">
+		<div class="container-fluid p-3 mb-2 bg-dark text-white d-flex justify-content-center">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7">
@@ -732,12 +685,13 @@
 								<div>
 									<h4>  Contact</h4>
 									<p>
-										   <span class="header-font"></span><span class="header-font"></span>LeMeilleurCoin.com
+										   <span class="header-font"></span><span class="header-font"></span>
 									</p>
 								</div>
 							</div>
 						</div>
 					</div>
+					
 					<div class="col-md-5">
 						<div class="d-inline-block">
 							<div class="bg-circle-outline d-inline-block"
@@ -765,15 +719,36 @@
 					</div>
 				</div>
 			</div>
-			<p class="text-center">Copyright © LeMeilleurCoin.com</p>
+			
 		</div>
+		<!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> LeMeilleurCoin.com</a>
+  </div>
+  <!-- Copyright -->
 	</footer>
 	<!--/.footer-->
 
 	<!--/.footer-bottom-->
 	<!-- fin footer -->
 
+</div> 
 
+<link
+		href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		rel="stylesheet" id="bootstrap-css">
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
+
+	<link
+		href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		rel="stylesheet">
+
+	<link
+		href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+		rel="stylesheet">
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

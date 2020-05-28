@@ -44,7 +44,7 @@ public class Connexion extends HttpServlet {
 //			HttpSession session = request.getSession();
 //			session.setAttribute("pseudo", pseudo);
 
-			this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+			this.getServletContext().getRequestDispatcher("/Index").forward(request, response);
 			// ouverture de la session du connecté
 
 		} else {
