@@ -134,7 +134,65 @@
 	<!-- FIN afficher les annonces -->
 
 
-	<!--debut de la carte  -->
+	
+
+	<!--fin localisation  -->
+
+
+
+
+
+	<!-- debut du carousel -->
+
+	<div id="carouselExampleCaptions" class="carousel slide"
+		data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleCaptions" data-slide-to="0"
+				class="active"></li>
+			<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+			<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+		<!-- BOUCLES DES 3 DERNIERES ANNONCES RECU EN SESSION -->		
+			<div class="carousel-item active">
+				<img src="${AnnoncesCarousel[0].nomImage}" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5><c:out value="${AnnoncesCarousel[0].titre}" /></h5>
+					<p><c:out value="${AnnoncesCarousel[0].prix}" />€</p>
+				</div>
+			</div>
+		
+		  <div class="carousel-item">
+				<img src="${AnnoncesCarousel[1].nomImage}" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5><c:out value="${AnnoncesCarousel[1].titre}" /></h5>
+					<p><c:out value="${AnnoncesCarousel[1].prix}" />€</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="${AnnoncesCarousel[2].nomImage}" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5><c:out value="${AnnoncesCarousel[2].titre}" /></h5>
+					<p><c:out value="${AnnoncesCarousel[2].prix}" />€</p>
+				</div>
+			</div>  
+			
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleCaptions"
+			role="button" data-slide="prev"> <span
+			class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+			class="sr-only">Previous</span>
+		</a> <a class="carousel-control-next" href="#carouselExampleCaptions"
+			role="button" data-slide="next"> <span
+			class="carousel-control-next-icon" aria-hidden="true"></span> <span
+			class="sr-only">Next</span>
+		</a>
+	</div>
+	<!-- fin du carousel -->
+
+	
+
+<!--debut de la carte  -->
 
 
 	<div class="_2B0td">
@@ -639,100 +697,6 @@
 		</section>
 	</div>
 	<!--fin de la barre de recherche de localisation   -->
-
-	<!--fin localisation  -->
-
-
-
-
-
-	<!-- debut du carousel -->
-
-	<div id="carouselExampleCaptions" class="carousel slide"
-		data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#carouselExampleCaptions" data-slide-to="0"
-				class="active"></li>
-			<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-			<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner">
-		<!-- BOUCLES DES 3 DERNIERES ANNONCES RECU EN SESSION -->		
-			<div class="carousel-item active">
-				<img src="${AnnoncesCarousel[0].nomImage}" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
-					<h5><c:out value="${AnnoncesCarousel[0].titre}" /></h5>
-					<p><c:out value="${AnnoncesCarousel[0].prix}" />€</p>
-				</div>
-			</div>
-		
-		  <div class="carousel-item">
-				<img src="${AnnoncesCarousel[1].nomImage}" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
-					<h5><c:out value="${AnnoncesCarousel[1].titre}" /></h5>
-					<p><c:out value="${AnnoncesCarousel[1].prix}" />€</p>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<img src="${AnnoncesCarousel[2].nomImage}" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
-					<h5><c:out value="${AnnoncesCarousel[2].titre}" /></h5>
-					<p><c:out value="${AnnoncesCarousel[2].prix}" />€</p>
-				</div>
-			</div>  
-			
-		</div>
-		<a class="carousel-control-prev" href="#carouselExampleCaptions"
-			role="button" data-slide="prev"> <span
-			class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-			class="sr-only">Previous</span>
-		</a> <a class="carousel-control-next" href="#carouselExampleCaptions"
-			role="button" data-slide="next"> <span
-			class="carousel-control-next-icon" aria-hidden="true"></span> <span
-			class="sr-only">Next</span>
-		</a>
-	</div>
-	<!-- fin du carousel -->
-
-	<h5 class="text-center p-3 mb-2 bg-primary text-white">Top des
-		ventes</h5>
-
-	<!-- debut top catégories -->
-
-
-	<div class="row row-cols-1 row-cols-md-3">
-		<div class="col mb-4">
-			<div class="card h-100">
-				<img src="img/electriqueguitare.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">Guitare</h5>
-
-				</div>
-			</div>
-		</div>
-		<div class="col mb-4">
-			<div class="card h-100">
-				<img src="img/viny.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">Vinyles</h5>
-
-				</div>
-			</div>
-		</div>
-		<div class="col mb-4">
-			<div class="card h-100">
-				<img src="img/carteson.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">Carte son</h5>
-
-				</div>
-			</div>
-		</div>
-
-	</div>
-	<!-- fin top catégories -->
-
-
 
 
 

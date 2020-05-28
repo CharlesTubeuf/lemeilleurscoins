@@ -27,7 +27,7 @@
 	<!--debut navbar  -->
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="./index.jsp">LeMeilleurCoin</a>
+		<a class="navbar-brand" href="/Index">LeMeilleurCoin</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
