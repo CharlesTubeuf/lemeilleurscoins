@@ -170,60 +170,64 @@ function initMap() {
 
 
 
-<div class="border-top ">
-			<!-- debut footer  -->
-
-			<footer>
-				<div
-					class="container-fluid p-3 mb-2 bg-dark text-white d-flex justify-content-center ">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-7">
-								<div class="row py-0"></div>
-							</div>
-
-							<div class="list-unstyled list-inline text-center">
-								<div class="d-inline-block">
-									<div class="bg-circle-outline d-inline-block"
-										style="background-color: #3b5998">
-										<a href="https://www.facebook.com/"><i
-											class="fa fa-2x fa-fw fa-facebook text-white"></i> </a>
-									</div>
-									<div class="bg-circle-outline d-inline-block"
-										style="background-color: #4099FF">
-										<a href="https://twitter.com/"> <i
-											class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
-									</div>
-
-									<div class="bg-circle-outline d-inline-block"
-										style="background-color: #0077B5">
-										<a href="https://www.linkedin.com/company/"> <i
-											class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
-									</div>
-									<div class="bg-circle-outline d-inline-block"
-										style="background-color: #d34836">
-										<a href="https://www.google.com/"> <i
-											class="fa fa-2x fa-fw fa-google text-white"></i></a>
-									</div>
-								</div>
-							</div>
+<div class="border-top">
+	<!-- debut footer  -->
+	
+	<footer>
+		<div class="container-fluid p-3 mb-2 bg-dark text-white d-flex justify-content-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="row py-0">
+						
+							
 						</div>
 					</div>
+					<div class="container p-3 mb-2 ">
+		<div class="block " >
+					<div class="list-unstyled list-inline text-center">
+						<div class="d-inline-block">
+							<div class="bg-circle-outline d-inline-block"
+								style="background-color: #3b5998">
+								<a href="https://www.facebook.com/"><i
+									class="fa fa-2x fa-fw fa-facebook text-white"></i> </a>
+							</div>
+							<div class="bg-circle-outline d-inline-block"
+								style="background-color: #4099FF">
+								<a href="https://twitter.com/"> <i
+									class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
+							</div>
 
+							<div class="bg-circle-outline d-inline-block"
+								style="background-color: #0077B5">
+								<a href="https://www.linkedin.com/company/"> <i
+									class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
+							</div>
+							<div class="bg-circle-outline d-inline-block"
+								style="background-color: #d34836">
+								<a href="https://www.google.com/"> <i
+									class="fa fa-2x fa-fw fa-google text-white"></i></a>
+							</div>
+							</div>
+					</div>
+						</div>
+					</div>
 				</div>
-				<!-- Copyright -->
-				<div class="footer-copyright text-center py-3 text-white">
-					© 2020 Copyright: <a href="https://mdbootstrap.com/">
-						LeMeilleurCoin.com</a>
-				</div>
-				<!-- Copyright -->
-			</footer>
-			<!--/.footer-->
-
-			<!--/.footer-bottom-->
-			<!-- fin footer -->
-
+			</div>
+			
 		</div>
+		<!-- Copyright -->
+  <div class="footer-copyright text-center py-3 text-white">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> LeMeilleurCoin.com</a>
+  </div>
+  <!-- Copyright -->
+	</footer>
+	<!--/.footer-->
+
+	<!--/.footer-bottom-->
+	<!-- fin footer -->
+
+</div> 
 
 		<link
 		href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
