@@ -96,36 +96,32 @@
 
 	<!-- mise en place d'un nombre de card égale au nombre d'annonce dans la liste d'annonce du compte. -->
 
+
+
+
+
+
+
+<div class="row row-cols-1 row-cols-md-4">
 	<c:forEach items="${listAnnonces}" var="Annonce">
-
-		<div class="block" col-sm-3>
-
-			<div class="card" style="width: 18rem;">
-				<img src="${Annonce.nomImage}" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">
-						<c:out value="${Annonce.titre}" />
-					</h5>
-					<p class="card-text">
-						Description :
-						<c:out value="${Annonce.description}" />
-					</p>
-				</div>
-				<ul class="list-group list-group-flush">
-					<li class="list-group-item">Prix : <c:out
-							value="${Annonce.prix}" />€</li>
-				</ul>
-				<div class="card-body">
-					<form action="SuprimeAnnonce" method="post">
-					<button type="submit"  class="card-link" value="${Annonce.id}" name="annonceId">Supprimé l'annonce</button>
-					</form>
-				</div>
-			</div>
-		</div>
-
-
+<div class="col mb-4">
+  <div class="card">
+    <img src="${Annonce.nomImage}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><c:out value="${Annonce.titre}" /></h5>
+      <p class="card-text">Description :
+						<c:out value="${Annonce.description}" /></p>
+      <p class="card-text">Prix : <c:out
+							value="${Annonce.prix}" />€</p>
+			<form action="SuprimeAnnonce" method="post">
+			<button type="submit" class="btn btn-outline-danger btn-lg btn-block" value="${Annonce.id}" name="annonceId" text-center>Supprimer</button>
+	  
+	  </form>				
+    </div>
+  </div>
+  </div>
 	</c:forEach>
-
+</div>
 
 
 
@@ -186,29 +182,12 @@
 </footer>
     <!--/.footer-->
 
-    <!--/.footer-bottom--> 
-
-	<!-- fin footer -->
-
-
+<!-- IMPORT DE BOOSTRAP VERSION 4.5 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<!-- IMPORT DE BOOSTRAP VERSION 4.5 -->
 
 
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-		crossorigin="anonymous">
-		
-	</script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous">
-		
-	</script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-		crossorigin="anonymous">
-		
-	</script>
+	
+	
 </body>
 </html>
