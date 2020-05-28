@@ -28,7 +28,7 @@ private int numTel ;
 
 private String ville ;
 
-private int codePostal;
+private String codePostal;
 
 @OneToMany (cascade = {CascadeType.ALL}, orphanRemoval = true)
 private List<Annonce> Annonces = new ArrayList<Annonce>() ;
@@ -44,7 +44,7 @@ public Compte() {
 
 
 
-public Compte (String pseudo,String mail, String mdp, int numTel,String ville, int codePostal) {
+public Compte (String pseudo,String mail, String mdp, int numTel,String ville, String codePostal) {
 
 	this.pseudo=pseudo;
 	this.mail=mail;
@@ -201,11 +201,11 @@ public void setVille(String ville) {
 	this.ville = ville;
 }
 
-public int getCodePostal() {
+public String getCodePostal() {
 	return codePostal;
 }
 
-public void setCodePostal(int codePostal) {
+public void setCodePostal(String codePostal) {
 	this.codePostal = codePostal;
 }
 

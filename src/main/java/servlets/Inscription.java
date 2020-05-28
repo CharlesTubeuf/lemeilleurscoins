@@ -25,7 +25,7 @@ public class Inscription extends HttpServlet {
 		String mdp = request.getParameter("mdp");
 		int numTel =  Integer.parseInt(request.getParameter("numTel"));
 		String ville = request.getParameter("ville");
-		int codePostal =  Integer.parseInt(request.getParameter("codePostal"));
+		String codePostal =  request.getParameter("codePostal");
 
 		/////////////////////////// INSTANCIE UN COMPTE AVEC LE FORMULAIRE
 		/////////////////////////// //////////////////////////////////
