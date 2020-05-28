@@ -65,10 +65,15 @@
 	<!--fin navbar  -->
 
 
+
+
+<!-- couleur du background -->
+ <div class="p-3 mb-2 bg-dark text-dark"> 
+
 	<!-- debut information sur l'utilisateur -->
 
 
-<div class="card text-center">
+<div class="card text-center p-3 mb-0 bg-secondary text-white">
   <div class="card-header">
    Pseudo : <c:out value="${compte.pseudo}" />
   </div>
@@ -77,7 +82,7 @@
     <p class="card-text">Numéro de téléphone : 0<c:out value="${compte.numTel}" /></p>
 
   </div>
-  <div class="card-footer text-muted">
+  <div class="card-footer  text-white">
    Adresse : <c:out value="${compte.ville}" />
   </div>
 </div>
@@ -88,7 +93,7 @@
 
 
 
-	<h5 class="text-center p-3 mb-2 bg-primary text-white">Vos
+	<h5 class="text-center p-3 mb-3 bg-primary text-white">Vos
 		annonces</h5>
 
 
@@ -102,12 +107,12 @@
 
 
 
-<div class="row row-cols-1 row-cols-md-4">
+<div class="row row-cols-1 row-cols-md-4 ">
 	<c:forEach items="${listAnnonces}" var="Annonce">
 <div class="col mb-4">
   <div class="card">
     <img src="${Annonce.nomImage}" class="card-img-top" alt="...">
-    <div class="card-body">
+    <div class="card-body bg-secondary text-white">
       <h5 class="card-title"><c:out value="${Annonce.titre}" /></h5>
       <p class="card-text">Description :
 						<c:out value="${Annonce.description}" /></p>
@@ -125,55 +130,61 @@
 
 
 
+<div class="border-top">
+			<!-- debut footer  -->
 
-	<!-- debut footer  -->
+			<footer>
+				<div
+					class="container-fluid p-3 mb-2 bg-dark text-white d-flex justify-content-center">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-7">
+								<div class="row py-0"></div>
+							</div>
 
+							<div class="list-unstyled list-inline text-center">
+								<div class="d-inline-block">
+									<div class="bg-circle-outline d-inline-block"
+										style="background-color: #3b5998">
+										<a href="https://www.facebook.com/"><i
+											class="fa fa-2x fa-fw fa-facebook text-white"></i> </a>
+									</div>
+									<div class="bg-circle-outline d-inline-block"
+										style="background-color: #4099FF">
+										<a href="https://twitter.com/"> <i
+											class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
+									</div>
 
-<footer>
-     <div class="container-fluid p-3 mb-2 bg-dark text-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-            <div class="row py-0">
-          <div class="col-sm-1 hidden-md-down">
-              <a class="bg-circle bg-info" href="#">
-                <i class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
-              </a>
-            </div>
-            <div class="col-sm-11 text-white">
-                <div><h4>  Contact</h4>
-                    <p>   <span class="header-font"></span><span class="header-font"></span>LeMeilleurCoin.com</p>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-5">
-          <div class="d-inline-block">
-            <div class="bg-circle-outline d-inline-block" style="background-color:#3b5998">
-              <a href="https://www.facebook.com/"><i class="fa fa-2x fa-fw fa-facebook text-white"></i>
-		</a>
-            </div>
-            <div class="bg-circle-outline d-inline-block" style="background-color:#4099FF">
-              <a href="https://twitter.com/">
-                <i class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
-            </div>
+									<div class="bg-circle-outline d-inline-block"
+										style="background-color: #0077B5">
+										<a href="https://www.linkedin.com/company/"> <i
+											class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
+									</div>
+									<div class="bg-circle-outline d-inline-block"
+										style="background-color: #d34836">
+										<a href="https://www.google.com/"> <i
+											class="fa fa-2x fa-fw fa-google text-white"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-            <div class="bg-circle-outline d-inline-block" style="background-color:#0077B5">
-              <a href="https://www.linkedin.com/company/">
-                <i class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
-            </div>
-            <div class="bg-circle-outline d-inline-block" style="background-color:#d34836">
-              <a href="https://www.google.com/">
-                <i class="fa fa-2x fa-fw fa-google text-white"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p class="text-center"> Copyright © LeMeilleurCoin.com </p>
-    </div>
-</footer>
-    <!--/.footer-->
+				</div>
+				<!-- Copyright -->
+				<div class="footer-copyright text-center py-3 text-white">
+					© 2020 Copyright: <a href="https://mdbootstrap.com/">
+						LeMeilleurCoin.com</a>
+				</div>
+				<!-- Copyright -->
+			</footer>
+			<!--/.footer-->
+
+			<!--/.footer-bottom-->
+			<!-- fin footer -->
+
+		</div>
+
 
 <!-- IMPORT DE BOOSTRAP VERSION 4.5 -->
 <link

@@ -124,7 +124,7 @@
 					
 					
 
-					<button type="submit" value="Inscription" class="btn btn-primary mx-auto" >Inscription</button>
+					<button type="submit" value="Inscription" class="btn btn-primary mx-auto p-3 mb-2" >Inscription</button>
 				</form>
 				<!--  fin inscription -->	
 				</div>		
