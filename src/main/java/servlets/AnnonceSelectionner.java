@@ -48,7 +48,7 @@ public class AnnonceSelectionner extends HttpServlet {
 		
 	
 		// Recuperer la ville de l'annonce
-		int codepostal = annonceSelect.getCompte().getCodePostal();
+		String codepostal = annonceSelect.getCompte().getCodePostal();
 
 		
 		// recuperation de la ville dans la base de donnée de la table villes_france_free
