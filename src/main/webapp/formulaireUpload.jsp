@@ -65,10 +65,14 @@
 
 	<!--fin navbar  -->
 
-
+<!-- couleur du background -->
+ <div class="p-3 mb-2 bg-dark text-white"> 
+ 
+ 
+ 
 	<!-- debut formulaire d'annonce -->
 
-
+<div class="container">
 	<form class="needs-validation" action="<c:url value="Upload" />"
 		method="post" enctype="multipart/form-data">
 		<fieldset>
@@ -122,103 +126,100 @@
 				<label for="fichier">Emplacement de l'image <span
 					class="requis">*</span></label> <input type="file" id="fichier"
 					name="fichier" value="<c:out value="${fichier.nom}"/>" placeholder="" /> <span
-					class="erreur">${form.erreurs['fichier']}</span> <br /> <input
-					type="submit" value="Envoyer" class="sansLabel" /> <br />
-
+					class="erreur">${form.erreurs['fichier']}</span> <br /> <!-- <input
+					type="submit" value="Envoyer" class="sansLabel" /> --> <br />
+<button type="submit" value="Envoyer" class="btn btn-primary mx-auto" >Envoyer</button>
 				<p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
 		</fieldset>
 	</form>
 
-
+</div>
 	<!-- fin formulaire d'annonce -->
 
 
 
 
+<div class="border-top">
+			<!-- debut footer  -->
 
-	<!-- debut footer  -->
-	<link
-		href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-		rel="stylesheet" id="bootstrap-css">
-	<script
-		src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-	<!------ Include the above in your HEAD tag ---------->
-
-	<link
-		href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-		rel="stylesheet">
-
-	<link
-		href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
-		rel="stylesheet">
-	<footer>
-		<div class="container-fluid p-3 mb-2 bg-dark text-white">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-7">
-						<div class="row py-0">
-							<div class="col-sm-1 hidden-md-down">
-								<a class="bg-circle bg-info" href="#"> <i
-									class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
-								</a>
+			<footer>
+				<div
+					class="container-fluid p-3 mb-2 bg-dark text-white d-flex justify-content-center">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-7">
+								<div class="row py-0"></div>
 							</div>
-							<div class="col-sm-11 text-white">
-								<div>
-									<h4>  Contact</h4>
-									<p>
-										   <span class="header-font"></span><span
-											class="header-font"></span>LeMeilleurCoin.com
-									</p>
+
+							<div class="list-unstyled list-inline text-center">
+								<div class="d-inline-block">
+									<div class="bg-circle-outline d-inline-block"
+										style="background-color: #3b5998">
+										<a href="https://www.facebook.com/"><i
+											class="fa fa-2x fa-fw fa-facebook text-white"></i> </a>
+									</div>
+									<div class="bg-circle-outline d-inline-block"
+										style="background-color: #4099FF">
+										<a href="https://twitter.com/"> <i
+											class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
+									</div>
+
+									<div class="bg-circle-outline d-inline-block"
+										style="background-color: #0077B5">
+										<a href="https://www.linkedin.com/company/"> <i
+											class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
+									</div>
+									<div class="bg-circle-outline d-inline-block"
+										style="background-color: #d34836">
+										<a href="https://www.google.com/"> <i
+											class="fa fa-2x fa-fw fa-google text-white"></i></a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-5">
-						<div class="d-inline-block">
-							<div class="bg-circle-outline d-inline-block"
-								style="background-color: #3b5998">
-								<a href="https://www.facebook.com/"><i
-									class="fa fa-2x fa-fw fa-facebook text-white"></i> </a>
-							</div>
-							<div class="bg-circle-outline d-inline-block"
-								style="background-color: #4099FF">
-								<a href="https://twitter.com/"> <i
-									class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
-							</div>
 
-							<div class="bg-circle-outline d-inline-block"
-								style="background-color: #0077B5">
-								<a href="https://www.linkedin.com/company/"> <i
-									class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
-							</div>
-							<div class="bg-circle-outline d-inline-block"
-								style="background-color: #d34836">
-								<a href="https://www.google.com/"> <i
-									class="fa fa-2x fa-fw fa-google text-white"></i></a>
-							</div>
-						</div>
-					</div>
 				</div>
-			</div>
-			<p class="text-center">Copyright © LeMeilleurCoin.com</p>
+				<!-- Copyright -->
+				<div class="footer-copyright text-center py-3">
+					© 2020 Copyright: <a href="https://mdbootstrap.com/">
+						LeMeilleurCoin.com</a>
+				</div>
+				<!-- Copyright -->
+			</footer>
+			<!--/.footer-->
+
+			<!--/.footer-bottom-->
+			<!-- fin footer -->
+
 		</div>
-	</footer>
-	<!--/.footer-->
 
-	<!--/.footer-bottom-->
-	<!-- fin footer -->
+		<link
+			href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			rel="stylesheet" id="bootstrap-css">
+		<script
+			src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<!------ Include the above in your HEAD tag ---------->
 
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-		crossorigin="anonymous"></script>
+		<link
+			href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet">
+
+		<link
+			href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+			rel="stylesheet">
+
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"></script>
 </body>
 </html>

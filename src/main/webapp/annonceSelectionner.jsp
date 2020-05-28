@@ -15,8 +15,8 @@
 <style>
        /* Set the size of the div element that contains the map */
       #map {
-        height: 200px;  /* The height is 400 pixels */
-        width: 200px;  /* The width is the width of the web page */
+        height: 400px;  /* The height is 400 pixels */
+        width: 850px;  /* The width is the width of the web page */
         background-color: grey;
        }
     </style>
@@ -73,57 +73,57 @@
 	</nav>
 
 	<!--fin navbar  -->
+	
+	
+	
+	<!-- couleur du background -->
+ <div class="p-3 mb-2 bg-dark text-dark"> 
+ 
+ 
 
 	<!-- début Affichage de l'annonce -->
 
-	<div class="container">
-		<div class="block" col-sm-6>
+	<div class="container p-3 mb-2 ">
+		<div class="block " >
 
-			<div class="card" style="width: 75%">
+			<div class="card " >
 				<img src="${annonceSelect.nomImage}" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">
+				<div class="card-body ">
+					<h5 class="card-title text-center ">
 						<c:out value="${annonceSelect.titre}" />
 					</h5>
-					<p class="card-text">
+					<p class="card-text text-center  ">
 						Description :
 						<c:out value="${annonceSelect.description}" />
 					</p>
 				
 				<ul class="list-group list-group-flush">
-					<li class="list-group-item">Prix : <c:out
+					<li class="list-group-item text-center  ">Prix : <c:out
 							value="${annonceSelect.prix}" /></li>
 				</ul>
 				<ul class="list-group list-group-flush">
-					<li class="list-group-item">Localisation : <c:out
+					<li class="list-group-item  text-center ">Localisation : <c:out
 							value="${annonceSelect.compte.ville}" /></li>
 				</ul>
 				</div>
-				<div class="card-body">
+				<div class="card-body  ">
 
-					<div class="card-header">
+					<div class="card-header text-center">
 						Vendu par :
 						<c:out value="${annonceSelect.compte.pseudo}" />
 					</div>
-					<div class="card-body">
-					<h5 class="card-title">	Mail : <c:out value="${annonceSelect.compte.mail}" />
+					<div class="card-body  ">
+					<h5 class="card-title text-center  ">	Mail : <c:out value="${annonceSelect.compte.mail}" />
 						</h5>
-						<p class="card-text">
+						<p class="card-text text-center">
 							Téléphone : 0<c:out value="${annonceSelect.compte.numTel}" />
 						</p>
 						
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+						
+						<div>
+						<!-- DEBUT AFFICHAGE DE LA MAP   -->
 
-	<!-- fin Affichage de l'annonce -->
-	
-	
-<!-- DEBUT AFFICHAGE DE LA MAP   -->
-
- <h3>Localisation de l'annonce</h3>
+ <h3 class="text-center">Localisation de l'annonce</h3>
     <!--The div element for the map -->
     <div id="map"></div>
     <script>
@@ -152,6 +152,106 @@ function initMap() {
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBlKcqseEtnMXU1lEnbs_zeIm-kxXPoPE&callback=initMap">
     </script>
 
+<!-- fin affichage de la map -->
+						
+						
+						
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- fin Affichage de l'annonce -->
+	
+	
+
+
+
+<div class="border-top ">
+			<!-- debut footer  -->
+
+			<footer>
+				<div
+					class="container-fluid p-3 mb-2 bg-dark text-white d-flex justify-content-center ">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-7">
+								<div class="row py-0"></div>
+							</div>
+
+							<div class="list-unstyled list-inline text-center">
+								<div class="d-inline-block">
+									<div class="bg-circle-outline d-inline-block"
+										style="background-color: #3b5998">
+										<a href="https://www.facebook.com/"><i
+											class="fa fa-2x fa-fw fa-facebook text-white"></i> </a>
+									</div>
+									<div class="bg-circle-outline d-inline-block"
+										style="background-color: #4099FF">
+										<a href="https://twitter.com/"> <i
+											class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
+									</div>
+
+									<div class="bg-circle-outline d-inline-block"
+										style="background-color: #0077B5">
+										<a href="https://www.linkedin.com/company/"> <i
+											class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
+									</div>
+									<div class="bg-circle-outline d-inline-block"
+										style="background-color: #d34836">
+										<a href="https://www.google.com/"> <i
+											class="fa fa-2x fa-fw fa-google text-white"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- Copyright -->
+				<div class="footer-copyright text-center py-3 text-white">
+					© 2020 Copyright: <a href="https://mdbootstrap.com/">
+						LeMeilleurCoin.com</a>
+				</div>
+				<!-- Copyright -->
+			</footer>
+			<!--/.footer-->
+
+			<!--/.footer-bottom-->
+			<!-- fin footer -->
+
+		</div>
+
+		<link
+			href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			rel="stylesheet" id="bootstrap-css">
+		<script
+			src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<!------ Include the above in your HEAD tag ---------->
+
+		<link
+			href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet">
+
+		<link
+			href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+			rel="stylesheet">
+
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"></script>
 
 <!-- FIN AFFICHAGE DE LA MAP   -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
