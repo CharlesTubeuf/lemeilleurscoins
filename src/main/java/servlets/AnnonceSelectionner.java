@@ -96,16 +96,6 @@ public class AnnonceSelectionner extends HttpServlet {
         }
     
 		
-	
-
-		
-
-		
-
-        // envoie de la ville en session pour recup longitude et ** pour API;
-//        HttpSession sessionGeoloc = request.getSession();
-//		request.setAttribute("latitude", latitude);
-        
         
 		this.getServletContext().getRequestDispatcher("/annonceSelectionner.jsp").forward(request,response);
 	}

@@ -76,7 +76,7 @@
 	<div>
 		
 				<h2 class="text-center">Inscrivez vous</h2>
-				<form action="Inscription" method="get">
+				<form action="Inscription" method="get" id="formulaireinscription">
 
 					<div class="form-group">
 						<label for="mail">Email</label> <input type="email"
@@ -105,16 +105,18 @@
 					</div>
 					
 					<div class="form-group">
-						<label for="ville">Ville</label> <input type="text"
-							class="form-control" id="exampleInputPassword1" name="ville" placeholder="ex:Marseille"
-							required>
-					</div>
-					
-					<div class="form-group">
 						<label for="codePostal">Code postal</label> <input type="number"
 							class="form-control" id="exampleInputPassword1" name="codePostal" placeholder="ex:13005"
 							required>
 					</div>
+					
+					<div class="form-group">
+						<label for="ville">Ville</label> <input type="text"
+							class="form-control" id="exampleInputPassword1" name="ville" placeholder="ex:Marseille"
+							required <script>$('#formulaireinscription').change(function(){...});</script>>
+					</div>
+					
+					
 					
 					
 

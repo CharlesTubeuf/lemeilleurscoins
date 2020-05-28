@@ -14,7 +14,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import beans.Annonce;
-import beans.VilleFrance;
+
 public class Test extends HttpServlet {
 	private static final long serialVersionUID = 1L;
      
