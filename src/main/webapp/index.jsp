@@ -103,6 +103,31 @@
 	<!--fin barre de recherche  -->
 
 	<!-- debut Afficher les annonces  -->
+	
+	<!-- NOUVELLE FORM DES ANNONCES RECHERCHER -->
+	<c:forEach items="${AnnoncesRechercher}" var="Annonce">
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="${Annonce.nomImage}" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><c:out value="${Annonce.titre}" /></h5>
+        <p class="card-text">Description :
+						<c:out value="${Annonce.description}" /></p>
+        <p class="card-text">Prix : <c:out
+							value="${Annonce.prix}" /></p>
+		<form action="AnnonceSelectionner" method="post">
+			<button type="submit" class="card-link" value="${Annonce.id}"	name="annonceId">Plus de détails</button>
+		</form>
+      </div>
+    </div>
+  </div>
+</div>
+</c:forEach>
+<!-- NOUVELLE FORM DES ANNONCES RECHERCHER FIN  -->	
+	
 
 	<c:forEach items="${AnnoncesRechercher}" var="Annonce">
 
@@ -726,7 +751,9 @@
 
 </div> 
 
+
 <!-- IMPORT DE BOOSTRAP VERSION 4.5 -->
+
 <link
 		href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		rel="stylesheet" id="bootstrap-css">
@@ -757,7 +784,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	
-	
+
 </body>
 </html>
 
