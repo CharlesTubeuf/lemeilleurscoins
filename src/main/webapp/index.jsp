@@ -134,7 +134,7 @@
 
 		<div class="block" col-sm-3>
 
-			<div class="card text-dark p-3 mb-2 bg-primary" style="width: 18rem;">
+			<div class="card bg-secondary text-white" style="width: 18rem;">
 				<img src="${Annonce.nomImage}" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">
@@ -145,8 +145,8 @@
 						<c:out value="${Annonce.description}" />
 					</p>
 				</div>
-				<ul class="list-group list-group-flush p-3 mb-2 bg-primary">
-					<li class="list-group-item p-3 mb-2 bg-primary">Prix : <c:out
+				<ul class="list-group list-group-flush bg-secondary text-white">
+					<li class="list-group-item bg-secondary text-white">Prix : <c:out
 							value="${Annonce.prix}" /></li>
 				</ul>
 				<div class="card-body">

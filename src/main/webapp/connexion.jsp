@@ -85,8 +85,8 @@
 			<!--  debut connexion -->
 			<div class="container">
 			<h2 class="text-center">Connectez vous</h2>
-			<i> <c:if test="${creer==true}"> Le compte à bien été creer, veuillez vous connecter... </c:if>
-				<c:if test="${connect==false}"> OUPS... le MDP ou le pseudo est incorrect, veuillez vous inscrire... </c:if>
+			<i> <c:if test="${creer==true}"><p class="text-success"> Le compte à bien été creer, veuillez vous connecter...</p> </c:if>
+				<c:if test="${connect==false}"><p class="text-danger">  OUPS... le MDP ou le pseudo est incorrect, veuillez vous inscrire...</p> </c:if>
 			</i>
 
 			<form action="Connexion" method="post" style='weight:70%;'>
@@ -102,7 +102,7 @@
 						required>
 				</div>
 
-				<button type="submit" class="btn btn-primary">Connexion</button>
+				<button type="submit" class="btn btn-primary p-3 mb-2">Connexion</button>
 
 
 			</form>
